@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded',function() {
         });
     };
 
-    function selectorMatches(el, selector) {
+    const selectorMatches = function(el, selector) {
     	var p = Element.prototype;
     	var f = p.matches || p.webkitMatchesSelector || p.mozMatchesSelector || p.msMatchesSelector || function(s) {
     		return [].indexOf.call(document.querySelectorAll(s), this) !== -1;
@@ -81,6 +81,16 @@ document.addEventListener('DOMContentLoaded',function() {
         });
 
         controls(news, newsflkty);
+    };
+    
+    window.playedCarousel = function() {
+        
+        const played = document.getElementById('played');
+
+        window.playedflkty = new Flickity( played, {
+            prevNextButtons: false,
+            pageDots: false
+        });
     };
     
     window.reviewsCarousel = function() {

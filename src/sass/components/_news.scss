@@ -43,24 +43,10 @@
     
     .o-avatar {
         margin-bottom: 20px;
-        text-align: center;
 
         .image {
             margin: -41px auto 10px auto;
-                    
-            img {
-                margin: 0 auto;
-            }
-        }
-        
-        .category {
-            letter-spacing: -.64px;
-            font: {
-                size: rem(18);
-                weight: $medium;
-            }
-            color: $c-pink-01;
-        }
+        }        
     }
     
     .o-box {

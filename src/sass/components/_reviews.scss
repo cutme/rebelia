@@ -17,18 +17,7 @@
                     size: 38px 38px;
                 }
             }
-        }
-        
-        .name {
-            font: {
-                size: rem(22);
-                weight: $semibold;
-            }
-        }
-        
-        img {
-            border-radius: 50%;
-        }
+        }              
     }
     
     .o-box {
@@ -38,11 +27,11 @@
     
     .o-wrap {
         overflow: hidden;
+        padding: 0;
+        max-width: 820px;
     }
     
     .flickity-viewport {
         overflow: visible;
     }
-    
-    
 }

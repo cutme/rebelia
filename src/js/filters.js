@@ -26,22 +26,24 @@ document.addEventListener('DOMContentLoaded',function() {
                 target.style.transform = "none";
             }
             
+            if (document.getElementById('played')) {
+                
+                let index = cutme.Helpers.thisIndex(e.currentTarget.parentNode);
+
+                window.playedflkty.select(index);
+            }
+            
             e.preventDefault() ? e.preventDefault() : e.preventDefault = false;
-            //e.preventDefault();
         }
         
         for (let i = 0; i < links.length; i++) {
             //links[i].addEventListener("click", (e) => e.preventDefault());
-            //
             
             if (el.classList.contains('js-hover')) {
                 links[i].addEventListener("mouseenter", action);
             } else {
                 links[i].addEventListener("click", action);
-            }
-            
-            
-            
+            }            
         }
         
         const initWidth = links[0].getBoundingClientRect().width;

@@ -22,10 +22,12 @@
 @import 'elements/typography';
 
 @import 'objects/article';
+@import 'objects/avatar';
 @import 'objects/back';
 @import 'objects/box';
 @import 'objects/btn';
 @import 'objects/cols';
+@import 'objects/container';
 @import 'objects/controls';
 @import 'objects/hamburger';
 @import 'objects/header';
@@ -41,6 +43,7 @@
 @import 'objects/upload';
 @import 'objects/wrap';
 
+@import 'components/trailers';
 @import 'components/appform';
 @import 'components/download';
 @import 'components/filters';

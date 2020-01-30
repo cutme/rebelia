@@ -50,6 +50,9 @@ require('./img/photos/news/small/02@2x.jpg');
 
 require('./img/photos/office.jpg');
 require('./img/photos/office@2x.jpg');
+
+require('./img/photos/placeholders/already-played--small.jpg');
+require('./img/photos/placeholders/already-played--small@2x.jpg');
 require('./img/photos/placeholders/already-played.jpg');
 require('./img/photos/placeholders/already-played@2x.jpg');
 require('./img/photos/placeholders/final-trider.jpg');

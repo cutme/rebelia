@@ -1,21 +1,24 @@
 .c-header {
-    @extend %flex;
-    @extend %flex-column;
-    @extend %flex-wrap;
-    @extend %flex-xy;
-    min-height: 100vh;
     background: {
         size: cover;
         position: center;
     }
-    padding: {
-        top: 100px;
-        bottom: 40px;
+    
+    .o-wrap {
+        @extend %flex;
+        @extend %flex-column;
+        @extend %flex-wrap;
+        @extend %flex-xy;
+        min-height: 100vh;
+        padding: {
+            top: 100px;
+            bottom: 40px;
+        }
+        color: white;
+        //height: 100%;
     }
-    color: white;
     
     &__cta {
-
         
         .o-btn {
             height: 70px;

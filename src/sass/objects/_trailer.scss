@@ -13,6 +13,24 @@
             @extend %abs-xy;
             @extend %anim;
             transform-origin: left center;
+        }        
+        
+        &:hover {
+            &:after {
+                transform: scale3d(1.1, 1.1, 1.1) translate3d(-50%, -50%, 0);
+            }
+        }
+        
+        &--big {
+            width: 820px;
+        }
+        
+        &--mechanics {
+            width: 1104px;
+        }
+
+        &--small {
+            width: 440px;
         }
         
         &--youtube {
@@ -23,24 +41,6 @@
                     size: cover;
                 }
             }
-        }
-        
-        &:hover {
-            &:after {
-                transform: scale3d(1.1, 1.1, 1.1) translate3d(-50%, -50%, 0);
-            }
-        }
-        
-        &--big {
-            width: $base__narrow2 + px;
-        }
-        
-        &--mechanics {
-            width: 1104px;
-        }
-
-        &--small {
-            width: 400px;
         }
     }
 }

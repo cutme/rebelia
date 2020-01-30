@@ -1,0 +1,35 @@
+.c-trailers {
+    height: 100%;
+    text-align: center;
+    
+    &--dark {
+        background-color: $c-black-03;
+        color: white;
+    }
+    
+    &--gray {
+        background-color: $c-gray-01;
+        
+        p {
+            color: $c-blue-04;
+        }
+    }
+
+    .c-filters {
+        margin-bottom: 50px;
+    }
+    
+    .o-trailer {
+
+        .o-article {
+            
+            p {
+                color: $c-gray-08;
+            }
+        }
+    }
+    
+    .main-carousel {
+        margin-bottom: 50px;
+    }
+}

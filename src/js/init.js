@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded',function() {
         
         //document.getElementById('mechanics') ? window.mechanicsCarousel() : false;
         document.getElementById('news') ? window.newsCarousel() : false;
+        document.getElementById('played') ? window.playedCarousel() : false;
         document.getElementById('reviews') ? window.reviewsCarousel() : false;
         document.getElementById('trailers') ? window.trailersCarousel() : false;
 

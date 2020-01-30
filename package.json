@@ -56,6 +56,7 @@
         "siema": "^1.5.1",
         "splitting": "^1.0.6",
         "stickybits": "^3.6.7",
+        "terser-webpack-plugin": "^2.3.4",
         "uglifyjs-webpack-plugin": "^2.1.1",
         "webfontloader": "^1.6.28"
     },

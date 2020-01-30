@@ -1,0 +1,24 @@
+.o-avatar {
+    text-align: center;
+    
+    img {
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    
+    .category {
+        letter-spacing: -.64px;
+        font: {
+            size: rem(18);
+            weight: $medium;
+        }
+        color: $c-pink-01;
+    }
+    
+    .name {
+        font: {
+            size: rem(22);
+            weight: $semibold;
+        }
+    } 
+}

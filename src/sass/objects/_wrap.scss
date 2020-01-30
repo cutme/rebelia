@@ -1,22 +1,23 @@
 .o-wrap {
     @extend %rel;
-	width: $base;
+	max-width: $base + 80px;
 	margin: 0 auto;	
-	
-	&--narrow {
-    	width: $base--narrow + 100px;
-    	
-    	&.padding {
-        	padding: {
-            	left: 100px;
-            	right: 100px;
-        	}
-    	}
+	padding: {
+    	left: 50px;
+    	right: 50px;
 	}
 	
-	&--narrow2 {
-    	width: $base--narrow2 + px;
+	&--narrow {
+    	width: $base--narrow + 100px;    	
     	
+    	
+    	@media ( max-width: $base--narrow + 100px ) {
+    		width: 100%;
+    	}
+    }
+	
+	&--narrow2 {
+    	width: 920px;
 	}
 
     &:not(.o-wrap--narrow) {
