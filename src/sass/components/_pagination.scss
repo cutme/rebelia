@@ -1,6 +1,7 @@
 .c-pagination {
     @extend %flex;
     @extend %flex-spacebetween;
+    margin-bottom: 100px;
     
     a {
         letter-spacing: -1px;
