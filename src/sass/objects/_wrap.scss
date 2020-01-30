@@ -1,0 +1,43 @@
+.o-wrap {
+    @extend %rel;
+	width: $base;
+	margin: 0 auto;	
+	
+	&--narrow {
+    	width: $base--narrow + 100px;
+    	
+    	&.padding {
+        	padding: {
+            	left: 100px;
+            	right: 100px;
+        	}
+    	}
+	}
+	
+	&--narrow2 {
+    	width: $base--narrow2 + px;
+    	
+	}
+
+    &:not(.o-wrap--narrow) {
+        &:not(.o-wrap--narrow2) {
+        	@media ( max-width: $base + 80px ) {
+        	    width: 100%;
+        	}
+        }
+    }
+	
+	@media ( max-width: $tablet + px ) {
+        padding: {
+        	left: 20px;
+        	right: 20px;
+    	}
+    }
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+        padding: {
+        	left: 15px;
+        	right: 15px;
+    	}
+    }
+}

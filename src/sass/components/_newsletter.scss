@@ -1,0 +1,26 @@
+.c-newsletter {
+    
+    input[type=email] {
+        border-radius: 6px 0 0 6px;
+    }
+    
+    &__form {
+        @extend %flex;
+        width: 520px;
+        margin: 0 auto 10px auto;
+        box-shadow: 0 12px 24px -6px rgba(#0A2242, .26);
+    }
+    
+    .o-btn {
+        height: 57px;
+        border-radius: 0 6px 6px 0;
+    }
+
+    .o-section {
+        background-color: $c-gray-04;
+    }
+    
+    .o-article {
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,44 @@
+.c-download {
+    @extend %flex;
+    width: 100%;
+    margin-bottom: 70px;
+    
+    .o-box {
+        padding: 30px;
+    }
+    
+    .title,
+    .subtitle {
+        line-height: 27px;
+        font-size: rem(22);
+        color: $c-blue-05;
+    }
+    
+    .title {
+        font-weight: $extrabold;
+    }
+    
+    .o-article {
+        margin-bottom: 30px;
+
+        p {
+            line-height: 34px;
+            font-size: rem(18);
+        }
+    }
+    
+    .o-btn {
+        width: 100%;
+        
+        i {
+            margin: 0 0 0 15px;
+            font-size: rem(24);
+        }
+    }
+    
+    .o-header {
+        margin-bottom: 30px;
+    }
+    
+    
+}

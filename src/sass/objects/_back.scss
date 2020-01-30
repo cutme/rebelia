@@ -1,0 +1,32 @@
+.o-back {
+    @extend %abs;
+    display: none;
+    left: 100px; bottom: -70px;
+    letter-spacing: -1px;
+    font: {
+        size: rem(18);
+        weight: $semibold;
+    }
+    color: $c-blue-01;
+    
+    .back-visible & {
+        display: block;
+    }
+    
+    &:before {
+        margin-right: 5px;
+        font: {
+            family: $rebelia;
+            size: rem(12);
+        }
+        content: "\e902";
+    }
+    
+    &:hover {
+        color: $c-blue-02;
+    }
+    
+    &:active {
+        color: $c-blue-03 !important;
+    }
+}

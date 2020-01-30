@@ -1,0 +1,89 @@
+.c-header {
+    @extend %flex;
+    @extend %flex-column;
+    @extend %flex-wrap;
+    @extend %flex-xy;
+    min-height: 100vh;
+    background: {
+        size: cover;
+        position: center;
+    }
+    padding: {
+        top: 100px;
+        bottom: 40px;
+    }
+    color: white;
+    
+    &__cta {
+
+        
+        .o-btn {
+            height: 70px;
+            margin-bottom: 50px;
+            
+            [class^="icon-"] {
+                margin-left: 10px;
+                font-size: rem(142);
+            }
+        }
+        
+        .o-more {
+            
+            &--arrowright {
+                font-weight: $bold;
+                
+                &:after {
+                    font-family: $rebelia;
+                    font-size: rem(12);
+                    content: "\e903";
+                }
+                
+                a {
+                    &:hover {
+                        .desktop & {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            
+            &--arrowdown {
+                a {
+                    display: inline-block;
+                    font-size: rem(50);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    
+    &__title {
+
+        margin-bottom: 130px;
+        text-align: center;
+        
+        .logo {
+            @extend %rel;
+            width: 540px;
+            margin: 0 auto -90px auto;
+        }
+
+        .first {
+            line-height: 1.25em;
+            font: {
+                size: rem(88);
+                weight: $extrabold;
+            }
+        }
+        
+        .second {
+            line-height: 47px;
+            font: {
+                size: rem(38);
+                weight: $semibold;
+            }
+        }
+    }
+    
+    
+}

@@ -1,0 +1,47 @@
+.o-btn {
+    @extend %anim;
+    display: inline-flex;
+    @extend %flex-xy;
+    @extend %rel;
+    height: 55px;
+    background-color: $c-blue-01;
+    border-radius: 6px;
+    white-space: nowrap;
+    padding: 0 30px;
+    letter-spacing: -1px;
+    font: {
+        family: $text;
+        weight: $semibold;
+        size: rem(22);
+    }
+    color: white;
+    cursor: pointer;    
+	
+	i {
+    	margin-right: 15px;
+
+    	&.icon-discord-button {
+        	font-size: rem(34);
+    	}
+	}
+}
+
+a.o-btn,
+button.o-btn {    
+    
+    &:active {
+        background-color: $c-blue-03 !important;
+    }
+    
+    &:hover {        
+        .desktop & {
+        	background-color: $c-blue-02;
+        }
+    }    
+}
+
+button {
+    span {
+        width: 100%;
+	}
+}

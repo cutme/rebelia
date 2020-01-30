@@ -1,0 +1,125 @@
+html:not(.ie) {
+    .is-loaded {
+        .anim {
+            &--delay1 {
+                transition-delay: 150ms;
+            }
+            
+            &--delay2 {
+                transition-delay: 250ms;
+            }
+            
+            &--delay3 {
+                transition-delay: 350ms;
+            }
+            
+            &--delay4 {
+                transition-delay: 450ms;
+            }
+    
+            transition: all 600ms ease-out;
+            opacity: 0;
+            
+            
+            
+            &--left {
+                transform: translate3d(-50px, 0, 0);
+            }
+            
+            &--right {
+                transform: translate3d(50px, 0, 0);
+            }
+            
+            &--scale {
+                transform: scale3d(0, 1, 1);
+            }
+            
+            &--up {
+                transform: translate3d(0, 50px, 0);
+            }
+            
+            &--visible {
+                transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+                opacity: 1;
+            }
+        }
+    }
+    
+    hr.anim {
+        opacity: 1;
+        transition: all 1600ms ease-out;
+    }
+}
+
+
+.is-hidden {
+    display: none;
+}
+
+
+
+// Text
+
+.aligncenter {
+    text-align: center;
+}
+
+.aligntop {
+    vertical-align: top;
+}
+
+.alignright {
+    float: right;
+    margin: 40px 0 40px 60px;
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
+
+.u-cover {
+    transition: all 500ms ease-out;
+    opacity: 1;
+    
+    .is-loaded & {
+        opacity: 0;
+    }
+}
+
+
+
+.u-toppadding {
+    padding-top: 70px;
+}
+
+
+.fade-out {
+    opacity: 0;
+}
+
+
+// Tooltip in Jobs
+
+[data-num] {
+    @extend %rel;
+    
+    &:after {
+        @extend %abs;
+        @extend %flex;
+        @extend %flex-xy;
+        right: -12px; top: -12px;
+        width: 21px; height: 21px;
+        background-color: $c-pink-01;
+        border-radius: 50%;
+        font-size: rem(13);
+        color: white;
+        content: attr(data-num);
+    }
+}
+
+// Disable next / prev buttons in GlideJs
+
+.gbtn {
+    display: none !important;
+}
+

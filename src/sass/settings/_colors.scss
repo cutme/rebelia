@@ -1,0 +1,32 @@
+$c-black-01:   #162131;
+$c-black-02:   #39465C;
+$c-black-03:   #1F1F1F;
+$c-black-04:   #162439;
+
+$c-blue-01:    #2D7DFB;
+$c-blue-02:    #478FFF;
+$c-blue-03:    #2570E7;
+$c-blue-04:    #40577A;
+$c-blue-05:    #092551;
+$c-blue-06:    #2684FF;
+$c-blue-07:    #435A7D;
+
+$c-gray-01:    #F6F6F6;
+$c-gray-02:    #F0F0F0;
+$c-gray-03:    #D6D6D6;
+$c-gray-04:    #F3F7FF;
+$c-gray-05:    #CAD1DD;
+$c-gray-06:    #6C6C6E;
+$c-gray-07:    #F1F1F1;
+
+$c-pink-01:    #E36084;
+$c-pink-02:    #E77393;
+$c-pink-03:    #D44E73;
+
+$c-red:        #E36084;
+
+$c-primary: $c-blue-01;
+
+:root {
+  --primary-color: #{$c-primary};
+}

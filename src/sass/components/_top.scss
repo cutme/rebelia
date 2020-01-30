@@ -1,0 +1,39 @@
+.c-top {
+    @include z-index(top);
+    @extend %abs;
+    @extend %flex;
+    @extend %flex-y;
+    left: 0; top: 0;
+    width: 100%; height: 96px;
+	padding: 0 22px;
+	
+	&__bar {
+    	width: 100%;
+    	height: 62px;
+    	background-color: $c-gray-02;
+    	border-radius: 6px;
+	} 
+	
+	.c-nav {
+    	@extend %flex;
+        @extend %flex-y;
+        
+        a {
+            font-weight: $semibold;
+        }
+	}
+	
+	.o-lang {
+    	margin-left: 150px;
+	}
+
+	.o-logo {
+    	margin-top: -17px;
+	}
+	
+	.o-wrap {
+    	@extend %flex;
+        @extend %flex-y;
+    	height: 100%;
+	}
+}

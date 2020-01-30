@@ -1,0 +1,66 @@
+.o-share {
+    ul {
+        @extend %flex;
+        @extend %flex-x;
+        
+        li {
+            margin: 0 15px;
+            
+            a {
+                @extend %flex;
+                @extend %flex-y;
+                
+                &:hover {
+                    .desktop & {
+                     
+                        .icon-heart {                            
+                            color: $c-pink-02;                             
+                        }   
+                        
+                        .icon-facebook-new,
+                        .icon-twitter-news,
+                        .icon-twitter-about {
+                            color: $c-blue-02;                            
+                        }
+                                             
+                    }
+                }
+                
+                &:active {
+                    .icon-heart {  
+                        color: $c-pink-03 !important;
+                    }
+                    
+                    .icon-facebook-new,
+                    .icon-twitter-news,
+                    .icon-twitter-about {
+                        color: $c-blue-03 !important;                           
+                    }
+                }
+            }
+            
+            span {
+                font: {
+                    size: rem(18);
+                    weight: $medium;
+                }
+                color: $c-blue-07;
+            }
+        }
+        
+        [class^="icon-"] {
+            margin-right: 10px;
+            font-size: rem(32);
+        }
+        
+        .icon-heart {
+            color: $c-pink-01;
+        }
+        
+        .icon-facebook-new,
+        .icon-twitter-news,
+        .icon-twitter-about {
+            color: $c-blue-01;
+        }
+    }
+}

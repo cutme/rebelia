@@ -1,0 +1,48 @@
+.c-social {
+    padding: 20px 0;
+    
+    ul {
+        @extend %flex;
+        
+        li {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+        
+        [class^="icon-"] {
+            @extend %anim;
+            display: inline-block;
+            font-size: rem(44);
+            
+            &:hover {
+                transform: scale3d(1.08, 1.08, 1.08);
+            }
+        }
+    }
+    
+    .icon-steam-about {
+        color: #2C2E35;
+    }
+    
+    .icon-facebook-about {
+        color: #1877F2;
+    }
+    
+    .icon-discord-about {
+        color: #7289DA;
+    }
+    
+    .icon-youtube-about {
+        color: #FF0000;
+    }
+    
+    
+    .icon-twitter-news {
+        color: #1DA1F2;
+    }
+    
+    .icon-twitter-about {
+        color: #2867B2;
+    }
+}

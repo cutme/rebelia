@@ -1,0 +1,80 @@
+.c-footer {
+    background-color: $c-black-03;
+    padding: 40px 0 80px;
+    
+    aside {
+        &:not(:last-of-type) {
+            width: 205px;
+        }
+        
+        &:last-of-type {
+            flex: 1;
+        }
+        
+        h6 {
+            margin-bottom: 5px;
+            font: {
+                size: rem(16);
+                weight: $bold;
+            }
+            color: $c-gray-06;
+        }
+    }    
+    
+    .o-lang {
+        margin-bottom: 20px;
+        
+        li {
+            &.is-active {
+                a {
+                    border-color: white;
+                    color: white;
+                }
+            }
+        }
+        
+        a {
+            color: $c-gray-06;
+            
+            &:hover {
+                .desktop & {
+                    background-color: white;
+                    color: $c-black-03;
+                }
+            }
+        }
+    }
+    
+    .o-logo {
+        margin: -40px 50px 0 0;
+    }
+    
+    .o-wrap {
+        @extend %flex;
+    }
+    
+    .copyrights {
+        margin-bottom: 20px;
+        font: {
+            size: rem(14);
+            weight: $medium;
+        }
+        color: $c-gray-06;
+    }
+    
+    .logotypes {
+        @extend %flex;
+
+        li {
+            &:not(:last-child) {
+                margin-right: 50px;
+            }
+            
+            [class^="icon-"] {
+                opacity: .3;
+                font-size: rem(56);
+                color: white;
+            }
+        }
+    }
+}

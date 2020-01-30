@@ -1,0 +1,48 @@
+.c-reviews {
+    
+    .o-avatar {
+        .image {
+            @extend %rel;
+            width: 74px; height: 74px;
+            margin: -37px auto 10px auto;
+            
+            &:before {
+                @extend %abs-pseudo;
+                left: 0; bottom: 0;
+                transform: translate3d(-50%, 0, 0);
+                width: 38px; height: 38px;
+                background: {
+                    image: url(../img/assets/like.png);
+                    repeat: no-repeat;
+                    size: 38px 38px;
+                }
+            }
+        }
+        
+        .name {
+            font: {
+                size: rem(22);
+                weight: $semibold;
+            }
+        }
+        
+        img {
+            border-radius: 50%;
+        }
+    }
+    
+    .o-box {
+        height: 100%;
+        overflow: visible;
+    }
+    
+    .o-wrap {
+        overflow: hidden;
+    }
+    
+    .flickity-viewport {
+        overflow: visible;
+    }
+    
+    
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="63px" viewBox="0 0 90 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>yt_logo_rgb_light</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.0442622951 0.703988372 89.620082 0.703988372 89.620082 63 0.0442622951 63"></polygon>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-Home" transform="translate(-438.000000, -1431.000000)">
+            <g id="Watch_the_final_trailer" transform="translate(10.000000, 1090.000000)">
+                <g id="YT" transform="translate(253.000000, 248.000000)">
+                    <g id="yt_logo_rgb_light" transform="translate(175.000000, 93.000000)">
+                        <g id="Icon">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-2"></g>
+                            <path d="M87.7470492,10.4308953 C86.7164754,6.60254651 83.680082,3.58660465 79.8240984,2.56322093 C72.835082,0.703988372 44.8096721,0.703988372 44.8096721,0.703988372 C44.8096721,0.703988372 16.785,0.703988372 9.79598361,2.56322093 C5.94,3.58660465 2.90360656,6.60254651 1.87303279,10.4308953 C0,17.3718837 0,31.8516279 0,31.8516279 C0,31.8516279 0,46.3321047 1.87303279,53.2723605 C2.90360656,57.1007093 5.94,60.1173837 9.79598361,61.1400349 C16.785,63 44.8096721,63 44.8096721,63 C44.8096721,63 72.835082,63 79.8240984,61.1400349 C83.680082,60.1173837 86.7164754,57.1007093 87.7470492,53.2723605 C89.620082,46.3321047 89.620082,31.8516279 89.620082,31.8516279 C89.620082,31.8516279 89.620082,17.3718837 87.7470492,10.4308953" id="Fill-1" fill="#FF0000" mask="url(#mask-2)"></path>
+                        </g>
+                        <polyline id="Fill-4" fill="#FFFFFE" points="35.8480328 45.2010349 59.1307377 31.8523605 35.8480328 18.5022209 35.8480328 45.2010349"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

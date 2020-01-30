@@ -1,0 +1,19 @@
+.c-shortnews {
+    
+    &--static {
+        h3 {
+            margin-bottom: .5em;
+            font-weight: $extrabold;
+        }
+    }
+    
+    .o-box {
+        figcaption {
+            font-weight: $semibold;
+        }
+    }  
+    
+    .o-section {
+        //padding-top: 0;
+    }  
+}

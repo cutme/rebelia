@@ -1,0 +1,41 @@
+.o-lang {
+    @extend %flex;
+    letter-spacing: -.5px;
+
+    li {
+        margin: 0 5px;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+        
+        &.is-active {
+            a {
+                border-color: $c-black-02;
+                font-weight: $semibold;
+            }
+        }
+    }
+
+    a {
+        @extend %flex;
+        @extend %flex-xy;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        text-transform: uppercase;
+        font: {
+            size: rem(14);
+            weight: $medium;
+        }
+        color: $c-black-02;
+        
+        &:hover {
+            .desktop & {
+                background-color: $c-black-02;
+                color: white;
+            }
+        }
+    }
+}

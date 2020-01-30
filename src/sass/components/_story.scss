@@ -1,0 +1,56 @@
+.c-story {
+    background: {
+        image: url(../img/photos/bg/story.jpg);
+        size: cover;
+        position: center;
+    }
+    padding-bottom: 30px;
+        
+    p {
+        color: white;
+    }
+    
+    .o-article {
+        max-width: 860px;
+    }
+    
+    .big {
+        margin-bottom: 50px;
+
+        p {
+            line-height: 76px;
+            font: {
+                size: rem(62);
+                weight: $bold;
+            }
+        }
+    }
+    
+    .normal {
+        line-height: 34px;
+        font: {
+            size: rem(24);
+            weight: $medium;
+        }
+    }
+}
+
+
+.splitting.word {
+    opacity: 0;
+}
+
+.startsplit {
+    &.splitting .word {
+        animation: slide-in 1.5s cubic-bezier(.5, 0, .5, 1) both;
+        animation-delay: calc(60ms * var(--word-index));
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translate3d(0, -50px, 0);
+        opacity: 0;      
+    }
+}
+

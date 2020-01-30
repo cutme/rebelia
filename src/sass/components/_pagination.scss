@@ -1,0 +1,46 @@
+.c-pagination {
+    @extend %flex;
+    @extend %flex-spacebetween;
+    
+    a {
+        letter-spacing: -1px;
+        font: {
+            size: rem(18);
+            weight: $semibold;
+        }
+        color: $c-blue-01;
+        
+        &.next,
+        &.previous {
+            &:after,
+            &:before {
+                font: {
+                    family: $rebelia;
+                    size: rem(12);
+                }
+            }
+        }
+        
+        &.previous {
+            &:before {
+                margin-right: 5px;
+                content: "\e902";
+            }
+        }
+        
+        &.next {
+            &:after {
+                margin-left: 5px;
+                content: "\e903";
+            }
+        }
+        
+        &:hover {
+            color: $c-blue-02;
+        }
+        
+        &:active {
+            color: $c-blue-03 !important;
+        }
+    }
+}

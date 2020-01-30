@@ -1,0 +1,48 @@
+.c-jobs {
+
+    &__list {
+        li:not(:last-child) {
+            margin-bottom: 40px;            
+        }
+    }
+
+    &__item {
+        @extend %anim;
+        @extend %rel;
+        display: block;
+        padding: 30px;
+        border: 1px solid $c-gray-03;
+        border-radius: 12px;
+        letter-spacing: -.5px;
+        
+        &:hover {
+            box-shadow: 0 38px 55px rgba(#9D9D9D, .51);
+            
+            &:after {
+                transform: translate3d(5px, -50%, 0);
+            }
+        }
+        
+        &:after {
+            @extend %abs-pseudo;
+            @extend %abs-y;
+            @extend %anim;
+            right: 30px;
+            font: {
+                family: $rebelia;
+                size: rem(30);
+            }
+            content: "\e903";
+            color: $c-blue-06;
+        }
+    }
+
+    .name {
+        font-weight: $bold;        
+        color: $c-blue-05;
+    }
+    
+    .time {
+        color: $c-black-02;
+    }
+}

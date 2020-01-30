@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="79px" viewBox="0 0 52 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Pin</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="10-Contact" transform="translate(-753.000000, -663.000000)">
+            <g id="Pin" transform="translate(753.000000, 663.000000)">
+                <path d="M26,78.7153886 C26.4535442,78.7153886 45.3700974,45.7909765 49.529332,36.9914004 C51.1139955,33.6387721 52,29.8927664 52,25.9402985 C52,11.6138672 40.3594035,0 26,0 C11.6405965,0 0,11.6138672 0,25.9402985 C0,29.9749272 0.923222419,33.7944209 2.57039418,37.1999641 C6.77211081,45.8870529 25.5464558,78.7153886 26,78.7153886 Z" id="Oval-4" fill="#E36084"></path>
+                <ellipse id="Oval-2" fill="#A63D5A" cx="26" cy="25.3507463" rx="11.2272727" ry="11.2014925"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

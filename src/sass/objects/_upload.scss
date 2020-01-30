@@ -1,0 +1,37 @@
+.o-upload {      
+    @extend %rel;
+    @extend %flex-inline;
+	overflow: hidden;
+	cursor: pointer;
+    
+    input[type='file'] {
+		@extend %abs;
+		opacity: 0;
+		left: 0; top: 0;
+		z-index: 10;
+		display: block;
+		cursor: inherit;        
+		font-size: 999px;
+		min-height: 100%;
+		min-width: 100%;
+    }
+    
+    &__title {
+        @extend %flex;
+        @extend %flex-y;
+        height: 48px;
+        border: 1px solid $c-gray-03;
+        border-radius: 6px;
+        padding: 0 20px 0 10px;
+        
+        img {
+            margin-right: 10px;
+        }
+        
+        span {
+            letter-spacing: -1px;
+            font-weight: $medium;
+            color: $c-blue-01;
+        }
+    }
+}

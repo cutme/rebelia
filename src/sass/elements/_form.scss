@@ -1,0 +1,132 @@
+button, input, textarea {
+	background-color: transparent;
+	border: none;
+	border-color: inherit;
+	border-radius: 0;
+	font-family: $text;
+	color: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+input, textarea {
+	width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+	text-rendering: optimizeLegibility; 
+	font: {
+		family: $text;
+		size: rem(14);
+	}
+	cursor: text;
+	color: inherit;
+}
+
+input {
+	&[disabled],
+	&[readonly] {
+		opacity: .5;
+	}
+}
+
+input {
+	&[type=text],
+	&[type=email],
+	&[type=tel] {
+		width: 100%;
+	}
+}
+
+textarea {
+	overflow: auto;
+	resize: none;
+}
+
+:invalid {
+  box-shadow: none;
+}
+
+:-moz-submit-invalid {
+  box-shadow: none;
+}
+
+:-moz-ui-invalid {
+  box-shadow:none;
+}
+
+      
+/*
+
+*/
+
+::-webkit-input-placeholder { color: rgba($c-black-02, .8); }
+:-moz-placeholder { color: rgba($c-black-02, .8); }
+::-moz-placeholder { color: rgba($c-black-02, .8); }
+:-ms-input-placeholder { color: rgba($c-black-02, .8); }
+
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=tel],
+textarea {
+    width: 100%;
+    background-color: white;
+    border: 1px solid $c-gray-05;
+    border-radius: 6px;
+    padding: 0 15px;
+    font: {
+        family: $text;
+        size: rem(18);
+    }
+
+    .is-loaded & {
+        @extend %anim;
+    }
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=tel] {
+    height: 57px;
+}
+
+textarea {
+    line-height: 1.85em;
+    padding: {
+        top: 15px;
+        bottom: 15px;
+    }
+    height: 150px;
+}
+
+.form-row {
+   @extend %flex;
+   margin: 0 -15px;
+}
+
+.form-group {
+    @extend %flex;
+    @extend %flex-wrap;
+    flex: 1;
+    margin-bottom: 15px;
+    padding: 0 15px;
+        
+    &.text-center {
+        justify-content: center;
+    }
+}
+
+label {
+    cursor: pointer;
+}
+
+sup {
+    color: $c-pink-01;
+}
+
+
+

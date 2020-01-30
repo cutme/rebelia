@@ -1,0 +1,31 @@
+.o-cols {
+	width: 100%;
+    
+    @media ( min-width: $tablet + 1px ) {
+    	display: flex;
+    }
+
+    &__item {
+        @extend %rel;
+    }
+    
+    &--2 {
+        .o-cols__item {
+            width: 386px;
+            letter-spacing: -1px;
+            
+            &:nth-of-type(even) {
+                margin-left: 24px;
+            }
+            
+            &:nth-of-type(odd) {
+                margin-right: 24px;
+            }
+            
+            .o-box {
+                height: 100%;
+            }
+        }
+    }
+}
+

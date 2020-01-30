@@ -1,0 +1,53 @@
+.c-nav {
+    
+    a {
+        letter-spacing: -0.5px;
+    }
+        
+    &__menu {
+        @extend %flex;
+        @extend %flex-y;
+        height: 100%;
+
+        & > li {
+            margin: 0 30px;
+            
+            &.current-menu-item {
+                a {
+                    text-decoration: underline;
+                }
+            }
+            
+            a {
+                font-size: rem(16);
+                
+                &:hover {
+                    .desktop & {
+                        color: black;
+                    }
+                }
+            }          
+        }
+    }
+
+    &__footer {
+
+        ul {
+            li {
+                padding: 2px 0;
+                
+                a {
+                    font: {
+                        size: rem(16);
+                        weight: $medium;
+                    }
+                    color: white;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
