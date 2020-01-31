@@ -9,6 +9,7 @@ const scrollPlugin = ScrollToPlugin;
         return {
 	        debounce: debounce,
 	        detach: detach,
+	        getPosition: getPosition,
         	isInView: isInView,
         	scrollTo: scrollTo,
         	thisIndex: thisIndex
@@ -39,6 +40,19 @@ const scrollPlugin = ScrollToPlugin;
 		parent.removeChild(node);	// Detach node from DOM.		
 		target.append(node, next);	// Append
 	};
+    
+    const getPosition = function(element) {
+        var xPosition = 0;
+        var yPosition = 0;
+    
+        while(element) {
+            xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+            yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+            element = element.offsetParent;
+        }
+    
+        return { x: xPosition, y: yPosition };
+    }
     
     const isInView = function(el) {
         let bottomOfWindow = (window.pageYOffset || window.scrollY) + window.innerHeight;

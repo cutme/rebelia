@@ -2,6 +2,8 @@ import css from './sass/style.scss';
 
 require('./js/polyfills.js');
 require('./js/init.js');
+require('./js/buybtn.js');
+require('./js/cookies.js');
 require('./js/appform.js');
 require('./js/carousels.js');
 require('./js/filters.js');
@@ -20,8 +22,10 @@ require('./js/upload.js');
 //require('./js/mobile-detach.js');
 
 
-require('./img/photos/bg/header.jpg');
-require('./img/photos/bg/junk-yard.jpg');
+
+
+require('./img/assets/cookie.png');
+require('./img/assets/cookie@2x.png');
 
 require('./img/assets/logo-junk.png');
 require('./img/assets/logo-junk@2x.png');
@@ -35,6 +39,8 @@ require('./img/photos/avatars/02@2x.jpg');
 require('./img/photos/avatars/03.jpg');
 require('./img/photos/avatars/03@2x.jpg');
 
+require('./img/photos/bg/header.jpg');
+require('./img/photos/bg/junk-yard.jpg');
 
 require('./img/photos/news/big/01.jpg');
 require('./img/photos/news/big/01@2x.jpg');

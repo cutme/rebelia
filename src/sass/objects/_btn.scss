@@ -24,6 +24,17 @@
         	font-size: rem(34);
     	}
 	}
+	
+	&--small {
+    	height: 40px;
+    	border-radius: 5px;
+    	padding: 0 20px;
+    	font-size: rem(18);
+	}
+	
+	&--outline {
+    	border: 2px solid white;
+	}
 }
 
 a.o-btn,
@@ -37,7 +48,8 @@ button.o-btn {
         .desktop & {
         	background-color: $c-blue-02;
         }
-    }    
+    }
+ 
 }
 
 button {
