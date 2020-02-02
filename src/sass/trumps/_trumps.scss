@@ -30,24 +30,15 @@ html:not(.ie) {
                 transform: translate3d(50px, 0, 0);
             }
             
-            &--scale {
-                transform: scale3d(0, 1, 1);
-            }
-            
             &--up {
                 transform: translate3d(0, 50px, 0);
             }
             
             &--visible {
-                transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+                transform: translate3d(0, 0, 0);
                 opacity: 1;
             }
         }
-    }
-    
-    hr.anim {
-        opacity: 1;
-        transition: all 1600ms ease-out;
     }
 }
 
@@ -107,13 +98,34 @@ html:not(.ie) {
         @extend %abs;
         @extend %flex;
         @extend %flex-xy;
-        right: -12px; top: -12px;
+        //right: -12px; 
+        //top: -12px;
+        top: -12px;
+        right: 0;
+        transform: translateX(50%);
         width: 21px; height: 21px;
         background-color: $c-pink-01;
         border-radius: 50%;
         font-size: rem(13);
         color: white;
         content: attr(data-num);
+        
+        .c-top & {
+            @media ( max-width: $tablet + px ) {
+                top: 0;
+            }
+        }
+        
+        .c-navfooter & {
+            @media ( max-width: $tablet + px ) {
+                top: 2px;
+            }
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	width: tablet_portrait(38); height: tablet_portrait(38);
+        	font-size: tablet_portrait(22);
+        }
     }
 }
 

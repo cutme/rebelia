@@ -73,6 +73,14 @@
 
 
                 <a href="javascript:window.history.back();" class="o-back">Back</a>
+                
+                <div class="o-hamburger">
+                    <div class="hamburger hamburger--slider js-hamburger">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -210,16 +218,18 @@
                 </div>
 
                 
-    <div class="c-shortnews c-shortnews--static anim anim--up">
+    <div class="c-shortnews anim anim--up">
         <div class="o-section o-section--paddings">
             <div class="o-wrap o-wrap--narrow2">
                 
-                <article class="o-article o-article--big">
-                    <h3>Read news</h3>
+                <article class="o-article o-article--margin o-article--big aligncenter">
+                    <h2>News</h2>
+                    
+                    <p>Read about game updates, new productions, development stages and company accouncments.</p>
                 </article>
                 
-                <div class="o-cols o-cols--2">
-                    <div class="o-cols__item anim anim--left">
+                <div class="main-carousel main-carousel--twocols main-carousel--withmobile anim anim--up" id="news">
+                    <div class="carousel-cell">
                         <a href="news-single.html">
                             <figure class="o-box">
                                 <div class="o-photo">
@@ -235,11 +245,75 @@
                         </a>
                     </div>
                     
-                    <div class="o-cols__item anim anim--right">
+                    <div class="carousel-cell">
                         <a href="news-single.html">
                             <figure class="o-box">
                                 <div class="o-photo">
-                                    <img srcset="./img/photos/news/small/02.jpg, ./img/photos/news/small/02@2x.jpg 2x" src="./img/photos/news/small/02.jpg" alt="">
+                                    <img srcset="./img/photos/news/small/01.jpg, ./img/photos/news/small/01@2x.jpg 2x" src="./img/photos/news/small/01.jpg" alt="">
+                                </div>
+                                
+                                <figcaption>
+                                    <p class="category">Company</p>
+                                    <h3 class="title">We’re looking for a Level Designer. Join Rebelia Games!</h3>
+                                    <p class="date">September 14, 2019</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    
+                    <div class="carousel-cell">
+                        <a href="news-single.html">
+                            <figure class="o-box">
+                                <div class="o-photo">
+                                    <img srcset="./img/photos/news/small/01.jpg, ./img/photos/news/small/01@2x.jpg 2x" src="./img/photos/news/small/01.jpg" alt="">
+                                </div>
+                                
+                                <figcaption>
+                                    <p class="category">JunkYard Simulator</p>
+                                    <h3 class="title">Rebelia Games announces DLC for JunkYard Simulator!</h3>
+                                    <p class="date">September 14, 2019</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    
+                    <div class="carousel-cell">
+                        <a href="news-single.html">
+                            <figure class="o-box">
+                                <div class="o-photo">
+                                    <img srcset="./img/photos/news/small/01.jpg, ./img/photos/news/small/01@2x.jpg 2x" src="./img/photos/news/small/01.jpg" alt="">
+                                </div>
+                                
+                                <figcaption>
+                                    <p class="category">Company</p>
+                                    <h3 class="title">We’re looking for a Level Designer. Join Rebelia Games!</h3>
+                                    <p class="date">September 14, 2019</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    
+                    <div class="carousel-cell">
+                        <a href="news-single.html">
+                            <figure class="o-box">
+                                <div class="o-photo">
+                                    <img srcset="./img/photos/news/small/01.jpg, ./img/photos/news/small/01@2x.jpg 2x" src="./img/photos/news/small/01.jpg" alt="">
+                                </div>
+                                
+                                <figcaption>
+                                    <p class="category">JunkYard Simulator</p>
+                                    <h3 class="title">Rebelia Games announces DLC for JunkYard Simulator!</h3>
+                                    <p class="date">September 14, 2019</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    
+                    <div class="carousel-cell">
+                        <a href="news-single.html">
+                            <figure class="o-box">
+                                <div class="o-photo">
+                                    <img srcset="./img/photos/news/small/01.jpg, ./img/photos/news/small/01@2x.jpg 2x" src="./img/photos/news/small/01.jpg" alt="">
                                 </div>
                                 
                                 <figcaption>
@@ -251,6 +325,24 @@
                         </a>
                     </div>
                 </div>
+                
+                
+                <div class="o-controls">
+                    
+                    <div class="dots js-group--dots">
+                        <i class="dot is-selected"></i>
+                        <i class="dot"></i>
+                        <i class="dot"></i>
+                    </div>
+                    
+                    <div class="arrows">
+                        <i class="icon-arrow-left js-previous"></i>
+                        <i class="icon-arrow-right js-next"></i>
+                    </div>
+                </div>
+                
+                
+
                 
                 <div class="o-more">
                     <a href="news.html" class="o-btn">Read all news</a>
@@ -269,7 +361,7 @@
         <div class="o-section o-section--paddings bg-gray">
             <div class="o-wrap o-wrap--narrow2">
                 
-                <article class="o-article o-article--big aligncenter">
+                <article class="o-article o-article--margin o-article--big aligncenter">
                     <h2>Stay updated</h2>
                     
                     <p>Stay in the loop with Rebelia news and games updates</p>
@@ -298,7 +390,7 @@
 
 
             <aside>
-                <nav class="c-nav__footer">
+                <nav class="c-navfooter">
                     <h6>Company</h6>
                     
                     <ul>
@@ -330,7 +422,7 @@
             </aside> 
             
             <aside>
-                <nav class="c-nav__footer">
+                <nav class="c-navfooter">
                     <h6>Games</h6>
                     
                     <ul>
@@ -342,7 +434,7 @@
             </aside> 
             
             <aside>
-                <nav class="c-nav__footer">
+                <nav class="c-navfooter">
                     <h6>Follow us</h6>
                     
                     <ul>
@@ -414,6 +506,9 @@
             <a href="#" class="o-btn o-btn--small js-accept">I accept</a>
         </div>
     </div>
+
+    
+    <div class="o-apla js-apla"></div>
 
 
 

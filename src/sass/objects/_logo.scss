@@ -2,4 +2,10 @@
 	@extend %rel;
 	@include z-index(logo);
     display: block;
+    flex-shrink: 0;
+    width: tablet_portrait(136);
+        
+    @media ( min-width: $tablet_portrait + 1px ) {
+    	width: 96px;
+    }
 }

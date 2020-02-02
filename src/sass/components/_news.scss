@@ -12,47 +12,45 @@
     
     .c-filters {
         margin-bottom: 100px;
-    }
-    
-    .o-article {
-        padding: 30px 80px;
-    }
-    
-    .author {
-        font-size: rem(18);
-        opacity: .5;
-    }
-    
-    .meta {
-        padding: 20px 80px;
-    }
-
-    .title {
-        margin-bottom: 40px;
-        padding: 0 80px;
-        line-height: 46px;
-        text-align: center;
-        font: {
-            size: rem(32);
-            weight: $bold;
+        
+        .item {
+            @media ( max-width: $tablet_portrait + px ) {
+            	font-size: tablet_portrait(25);
+            }
         }
-        color: $c-blue-05;
-    }
-    
-    
+    }    
     
     .o-avatar {
         margin-bottom: 20px;
 
         .image {
             margin: -41px auto 10px auto;
-        }        
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	width: tablet_portrait(104); height: tablet_portrait(104);
+            	margin: tablet_portrait(-45) auto tablet_portrait(10) auto;
+            }
+        }       
     }
     
     .o-box {
         margin-top: 50px;
         overflow: visible;
         
+        .o-article {
+            padding: 30px 80px;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                padding: 30px tablet_portrait(50);
+            }
+            
+            p {
+                @media ( max-width: $tablet_portrait + px ) {
+                	font-size: tablet_portrait(28);
+                }
+            }
+        }
+
         figcaption {
             font-weight: $semibold;
         }
@@ -65,5 +63,37 @@
     .o-share {
         padding: 40px 0 50px 0;
     }
+    
+    .author {
+        font-size: rem(18);
+        opacity: .5;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	font-size: tablet_portrait(28);
+        }
+    }
+    
+    .meta {
+        padding: 20px 80px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            padding: 20px tablet_portrait(50);
+        }
+    }
+
+    .title {
+        margin-bottom: 40px;
+        padding: 0 80px;
+        line-height: 46px;
+        text-align: center;
+        font: {
+            size: rem(32);
+            weight: $bold;
+        }
+        color: $c-blue-05;
+    }    
+    
+    
+
      
 }

@@ -7,16 +7,15 @@ document.addEventListener('DOMContentLoaded',function() {
         const links = document.querySelectorAll(".js-trace a");
         
         function action(e) {
+            
             if (!this.parentNode.classList.contains("active")) {
                 for (let i = 0; i < links.length; i++) {
                     if (links[i].parentNode.classList.contains("is-active")) {
                         links[i].parentNode.classList.remove("is-active");
                     }
-                    //links[i].style.opacity = "0.25";
                 }
             
                 this.parentNode.classList.add("is-active");
-                //this.style.opacity = "1";
                 
                 const width = this.getBoundingClientRect().width;
                 const left = this.offsetLeft;
@@ -24,6 +23,7 @@ document.addEventListener('DOMContentLoaded',function() {
                 target.style.width = `${width}px`;
                 target.style.left = `${left}px`;
                 target.style.transform = "none";
+                target.classList.add('is-active');
             }
             
             if (document.getElementById('played')) {
@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded',function() {
         }
         
         for (let i = 0; i < links.length; i++) {
-            //links[i].addEventListener("click", (e) => e.preventDefault());
             
             if (el.classList.contains('js-hover')) {
                 links[i].addEventListener("mouseenter", action);
@@ -46,12 +45,35 @@ document.addEventListener('DOMContentLoaded',function() {
             }            
         }
         
-        const initWidth = links[0].getBoundingClientRect().width;
-        const initLeft = links[0].offsetLeft;
         
-        target.style.width = `${initWidth}px`;
-        target.style.left = `${initLeft}px`;
-        target.style.transform = "none";
+        
+        const reset = function() {
+            
+            for (let i = 0; i < links.length; i ++) {
+                
+                if (links[i].parentNode.classList.contains('is-active')) {
+                    
+                    let initWidth = links[i].getBoundingClientRect().width;
+                    let initLeft = links[i].offsetLeft;
+                    
+                    target.style.width = `${initWidth}px`;
+                    target.style.left = `${initLeft}px`;
+                    target.style.transform = "none";
+                }
+            }
+        };
+        
+        setTimeout(function() {
+            reset();
+        }, 500);
+        
+        window.addEventListener('resize', function() {
+            
+            setTimeout(function() {
+                reset();
+            }, 1);
+            
+        });
 
     };
     

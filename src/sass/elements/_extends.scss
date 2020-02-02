@@ -107,11 +107,20 @@
 }
 
 %lead--1 {
+    line-height: 1.2em;
     font-size: rem(64);
+
+    @media ( max-width: $tablet_portrait + px ) {
+    	font-size: tablet_portrait(54);
+    }
 }
 
 %lead--2 {
     font-size: rem(44);
+    
+    @media ( max-width: $tablet_portrait + px ) {
+    	font-size: tablet_portrait(54);
+    }
 }
 
 %lead--3 {

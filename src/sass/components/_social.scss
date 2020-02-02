@@ -7,6 +7,10 @@
         li {
             &:not(:last-child) {
                 margin-right: 20px;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    margin-right: tablet_portrait(20);
+                }
             }
         }
         
@@ -15,8 +19,14 @@
             display: inline-block;
             font-size: rem(44);
             
+            @media ( max-width: $tablet_portrait + px ) {
+            	font-size: tablet_portrait(64);
+            }
+            
             &:hover {
-                transform: scale3d(1.08, 1.08, 1.08);
+                .desktop & {
+                    transform: scale3d(1.08, 1.08, 1.08);
+                }
             }
         }
     }

@@ -1,9 +1,16 @@
 .o-section {
     
    &--paddings {
-	   padding: {
+	    padding: {
     	   top: 80px;
     	   bottom: 80px;
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	padding: {
+        	   top: tablet_portrait(80);
+        	   bottom: tablet_portrait(80);
+            }
         }
    }
    

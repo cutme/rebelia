@@ -19,10 +19,11 @@ $extrabold:         800;
 
 
 $z-index: (
-    cookies       : 50,
+    apla:           40,
+    cookies       : 30,
     hamburger:      100,
     header:         30,
-	top           : 40,
+	top           : 45,
 	topbar        : 60,
 	nav           : 50,
 	logo          : 60
@@ -46,7 +47,7 @@ $base--narrow2:		 820;
 // RWD
 
 $desktop:              1920;
-$tablet:               1023;
+$tablet:               1024;
 $tablet_portrait:       768;
 $smartphone:			640;
 $smartphone_portrait:	500;

@@ -3,14 +3,16 @@
     padding: 40px 0 80px;
     
     aside {
-        &:not(:last-of-type) {
-            width: 205px;
+        @media ( min-width: $tablet_portrait + 1px ) {
+            &:not(:last-of-type) {
+                width: grid(205, 1200);
+            }
+            
+            &:last-of-type {
+                flex: 1;
+            }
         }
-        
-        &:last-of-type {
-            flex: 1;
-        }
-        
+
         h6 {
             margin-bottom: 5px;
             font: {
@@ -18,11 +20,26 @@
                 weight: $bold;
             }
             color: $c-gray-06;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	display: none;
+            }
+        }
+        
+        &:last-of-type {
+            @media ( max-width: $tablet_portrait + px ) {
+            	display: flex;
+            	flex-direction: column;
+            }
         }
     }    
     
     .o-lang {
         margin-bottom: 20px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	margin-bottom: tablet_portrait(150);
+        }
         
         li {
             &.is-active {
@@ -47,10 +64,24 @@
     
     .o-logo {
         margin: -40px 50px 0 0;
+        
+        @media ( max-width: $tablet + px ) {
+        	margin-right: 25px;
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            margin: -40px auto tablet_portrait(60) auto;
+        }
     }
     
     .o-wrap {
-        @extend %flex;
+        @media ( min-width: $tablet_portrait + 1px ) {
+        	display: flex;
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	text-align: center;
+        }
     }
     
     .copyrights {
@@ -60,20 +91,37 @@
             weight: $medium;
         }
         color: $c-gray-06;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            order: 2;
+        	font-size: tablet_portrait(32);
+        }
     }
     
     .logotypes {
         @extend %flex;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            justify-content: center;
+            margin-bottom: tablet_portrait(50);
+            justify-content: space-around;
+        }
 
         li {
-            &:not(:last-child) {
-                margin-right: 50px;
+            @media ( min-width: $tablet_portrait + 1px ) {
+                &:not(:last-child) {
+                    margin-right: 50px;
+                }
             }
             
             [class^="icon-"] {
                 opacity: .3;
                 font-size: rem(56);
                 color: white;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    font-size: tablet_portrait(100);
+                }
             }
         }
     }

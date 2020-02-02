@@ -11,8 +11,9 @@
     transform: translate3d(0, -100%, 0);
     
     &.is-visible {
-        
-        transform: translate3d(0, 0, 0);
+        @media ( min-width: $tablet + 1px ) {
+            transform: translate3d(0, 0, 0);	
+        }
     }
     
     .is-loaded & {
@@ -31,6 +32,10 @@
             weight: $medium;
         }
         color: white;
+        
+        @media ( max-width: $tablet + px ) {
+        	display: none;
+        }
     }
     
     .o-btn {

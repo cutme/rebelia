@@ -1,7 +1,12 @@
 .c-download {
     @extend %flex;
     width: 100%;
-    margin-bottom: 70px;
+    margin: 0 auto 70px auto;
+    
+    @media ( max-width: $tablet_portrait + px ) {
+    	width: grid(650, 748);
+    	margin: 0 auto 70px auto;
+    }
     
     .o-box {
         padding: 30px;
@@ -12,6 +17,11 @@
         line-height: 27px;
         font-size: rem(22);
         color: $c-blue-05;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            line-height: 1.2em;
+        	font-size: tablet_portrait(36);
+        }
     }
     
     .title {
@@ -20,10 +30,20 @@
     
     .o-article {
         margin-bottom: 30px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            margin-bottom: tablet_portrait(60);
+        }
 
         p {
             line-height: 34px;
             font-size: rem(18);
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                line-height: 50px;
+                line-height: 1.8em;
+            	font-size: tablet_portrait(28);
+            }
         }
     }
     
@@ -33,6 +53,41 @@
         i {
             margin: 0 0 0 15px;
             font-size: rem(24);
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	font-size: tablet_portrait(37);
+            }
+        }
+    }
+    
+    .o-cols {
+        &__item {
+            
+            @media ( max-width: 840px ) {
+            	width: grid(386, 820);
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	width: 100%;
+            }
+            
+            &:nth-of-type(even) {
+                @media ( max-width: $tablet_portrait + px ) {
+                    margin-left: 0;
+                }
+            }
+            
+            &:nth-of-type(odd) {
+                @media ( max-width: $tablet_portrait + px ) {
+                    margin-right: 0;
+                }
+            }
+            
+            &:not(:last-of-type) {
+                @media ( max-width: $tablet_portrait + px ) {
+                    margin-bottom: 40px;
+                }
+            }
         }
     }
     

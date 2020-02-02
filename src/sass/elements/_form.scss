@@ -56,10 +56,6 @@ textarea {
   box-shadow:none;
 }
 
-      
-/*
-
-*/
 
 ::-webkit-input-placeholder { color: rgba($c-black-02, .8); }
 :-moz-placeholder { color: rgba($c-black-02, .8); }
@@ -81,6 +77,12 @@ textarea {
         family: $text;
         size: rem(18);
     }
+    
+    @media ( max-width: $tablet_portrait + px ) {
+    	border-radius: tablet_portrait(12);
+    	padding: 0 20px;
+    	font-size: tablet_portrait(28);
+    }
 
     .is-loaded & {
         @extend %anim;
@@ -92,6 +94,10 @@ input[type=email],
 input[type=url],
 input[type=tel] {
     height: 57px;
+    
+    @media ( max-width: $tablet_portrait + px ) {
+    	height: tablet_portrait(88);
+    }
 }
 
 textarea {

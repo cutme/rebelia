@@ -3,19 +3,49 @@
     &--twocols {
         @extend %flex;
         @extend %flex-column;
-        width: 820px;
-        
+        max-width: 820px;
+        	
         .carousel-cell {
-            width: 386px;
-            
-            &:nth-of-type(even) {
-                margin-left: 24px;
-            }
-            
-            &:nth-of-type(odd) {
-                margin-right: 24px;
+            @media ( min-width: $tablet_portrait + 1px ) {
+                width: 386px;
+                
+                &:nth-of-type(even) {
+                    margin-left: 24px;
+                }
+                
+                &:nth-of-type(odd) {
+                    margin-right: 24px;
+                }
             }
         } 
+    }
+    
+    &--withmobile {
+        
+        &:after {
+            display: none;
+            content: 'flickity.desktop';
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                content: 'flickity.mobile';
+            }
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	
+        	.carousel-cell {
+            	width: grid(620, 768);
+            	margin: 0 tablet_portrait(18);
+            	
+            	transition: opacity .3s ease-out;
+                //width: 100%;
+                opacity: .5;
+                
+                &.is-selected {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }
 
@@ -81,32 +111,6 @@
     border: 2px solid $c-black-02;
     border-radius: 50%;
     font-size: rem(30);
-/*
-    @extend %abs;
-    @extend %flex;
-    border: none;
-    font-family: $icomoon;  
-
-    &:before {
-        text-align: center;
-        font-size: rem(24);
-        content: "\e909";
-    }
-
-    &.next {  
-        transition: transform 50ms;
-       
-        &:before {
-            transform: scaleX(-1);
-        }
-    }
-
-    &:disabled {
-        opacity: 0.3;
-        cursor: auto;
-        pointer-events: none; // prevent disabled button from capturing pointer up event.
-    }
-*/
 }
 
 

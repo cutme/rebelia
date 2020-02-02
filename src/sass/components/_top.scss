@@ -1,39 +1,63 @@
 .c-top {
     @include z-index(top);
     @extend %abs;
-    @extend %flex;
-    @extend %flex-y;
     left: 0; top: 0;
     width: 100%; height: 96px;
 	padding: 0 22px;
+	
+	@media ( min-width: $tablet_portrait + 1px ) {
+		display: flex;
+		align-items: center;
+	}
+	
+	@media ( max-width: $tablet + px ) {
+		position: fixed;
+		padding: 0 10px;
+	}
+	
+	@media ( max-width: $tablet_portrait + px ) {
+		height: tablet_portrait(150);
+        padding-top: tablet_portrait(20);
+	}
 	
 	&__bar {
     	width: 100%;
     	height: 62px;
     	background-color: $c-gray-02;
     	border-radius: 6px;
+    	
+    	@media ( max-width: $tablet_portrait + px ) {
+        	height: tablet_portrait(88);
+        }
 	} 
 	
-	.c-nav {
-    	@extend %flex;
-        @extend %flex-y;
-        
-        a {
-            font-weight: $semibold;
-        }
-	}
-	
 	.o-lang {
-    	margin-left: 150px;
+    	margin: 0 0 0 auto;
+
+        @media ( max-width: $tablet + px ) {
+        	background-color: $c-gray-01;
+        	padding: 15px;
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	padding: tablet_portrait(25);
+        }
 	}
 
 	.o-logo {
-    	margin-top: -17px;
+    	@media ( min-width: $tablet_portrait + 1px ) {
+        	margin-top: -17px;
+    	}
 	}
 	
 	.o-wrap {
     	@extend %flex;
         @extend %flex-y;
     	height: 100%;
+    	
+    	@media ( max-width: $base--narrow + 100px ) {
+    		max-width: 100%;
+    		//padding: 0;
+    	}
 	}
 }

@@ -4,11 +4,21 @@
 
         h2 {
             @extend %lead--2;
+            margin-bottom: 30px;
+            line-height: 1.25em;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	margin-bottom: tablet_portrait(30);
+            }
         }
         
         p {
             line-height: 1.35em;
             font-size: rem(24);
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	font-size: tablet_portrait(32);
+            }
         }
     }
 
@@ -19,21 +29,45 @@
     
     .o-cols {
         padding: 10px 0;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	padding: tablet_portrait(10) 0;
+        }
 
         &__item {
-            width: 50%;
+            
+            @media ( min-width: $tablet + 1px ) {
+            	width: 50%;
+            }
   
             &:first-of-type {
-                padding-right: 5px;
+                
+                @media ( min-width: $tablet + 1px ) {
+                    padding-right: 5px;
+                }
+                
+                @media ( max-width: $tablet + px ) {
+                	margin-bottom: 10px;
+                }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	margin-bottom: tablet_portrait(10);
+                }
                 
                 .o-article {
                     margin-bottom: 30px;
+                    
+                    @media ( max-width: $tablet_portrait + px ) {
+                        margin-bottom: tablet_portrait(50);
+                    }
                 }
             }
             
             &:last-of-type {
-                padding-left: 5px;
-                //background-color: $c-black-03;
+                
+                @media ( min-width: $tablet + 1px ) {
+                    padding-left: 5px;
+                }
                 
                 .o-trailer {
                     color: white;
@@ -49,6 +83,10 @@
                     p {
                         opacity: .3;
                         color: white;
+                        
+                        @media ( max-width: $tablet_portrait + px ) {
+                        	font-size: tablet_portrait(32);
+                        }
                     }
                 }  
             }
@@ -58,6 +96,11 @@
     .main-carousel {
         width: 440px;
         margin: 0 auto 50px auto;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            width: auto;
+        	max-width: 560px;
+        }
     }
     
     .carousel-cell {

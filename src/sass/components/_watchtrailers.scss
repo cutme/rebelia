@@ -1,0 +1,38 @@
+.c-watchtrailers {
+    width: calc(100% + 20px);
+    margin: 0 -10px;
+    text-align: center;
+    
+    .o-wrap {
+        overflow: hidden;
+    }
+    
+    .flickity-viewport {
+        overflow: visible;
+    }
+    
+    .main-carousel {
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	margin-bottom: tablet_portrait(50);
+        }
+        
+        .carousel-cell {
+
+            @media ( max-width: $tablet_portrait + px ) {
+            	max-width: 620px;
+            	margin: 0 tablet_portrait(18);
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	transition: opacity .3s ease-out;
+                width: 80%;
+                opacity: .5;
+                
+                &.is-selected {
+                    opacity: 1;
+                }
+            }
+        } 
+    }
+}

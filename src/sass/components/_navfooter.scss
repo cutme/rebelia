@@ -1,0 +1,32 @@
+.c-navfooter {
+
+    ul {
+        li {
+            @media ( min-width: $tablet_portrait + 1px ) {
+                padding: 2px 0;
+            }
+            
+            a {
+                display: inline-block;
+                line-height: 26px;
+                font: {
+                    size: rem(16);
+                    weight: $medium;
+                }
+                color: white;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    line-height: tablet_portrait(84);
+                	font: {
+                    	size: tablet_portrait(38);
+                    	weight: $regular;
+                    }
+                }
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

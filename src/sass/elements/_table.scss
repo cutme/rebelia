@@ -1,0 +1,9 @@
+table {
+    tr {
+        th, td {
+            @media ( max-width: $tablet_portrait + px ) {
+                display: block;
+            }
+        }
+    }
+}

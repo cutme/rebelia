@@ -1,0 +1,16 @@
+.o-apla {
+    @include z-index(apla);
+    @extend %anim;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    display: none;
+    
+    &.is-visible {
+        display: block;
+    }
+    
+    &.is-black {
+        background-color: rgba(#030202, .5);
+    }
+}

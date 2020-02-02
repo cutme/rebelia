@@ -20,5 +20,33 @@
             size: rem(22);
             weight: $semibold;
         }
-    } 
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            letter-spacing: -1px;
+        	font-size: tablet_portrait(30); 
+        }
+    }
+    
+    &--thumb {
+        
+        .image {
+            @extend %rel;
+
+            &:before {
+                @extend %abs-pseudo;
+                left: 0; bottom: 0;
+                transform: translate3d(-50%, 0, 0);
+                width: 38px; height: 38px;
+                background: {
+                    image: url(../img/assets/like.png);
+                    repeat: no-repeat;
+                    size: cover;
+                }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	width: tablet_portrait(58); height: tablet_portrait(58);
+                }
+            }
+        }
+    }
 }

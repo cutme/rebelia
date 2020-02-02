@@ -1,4 +1,46 @@
 .o-more {
     padding-top: 50px;
     text-align: center;
+    
+    @media ( max-width: $base--narrow + 100px ) {
+        padding-top: base-narrow(50);
+    }
+    
+    @media ( max-width: $tablet_portrait + px ) {
+    	padding-top: tablet_portrait(50);
+    }
+    
+    &--arrowright {
+        font-weight: $bold;
+        
+        &:after {
+            font-family: $rebelia;
+            font-size: rem(12);
+            content: "\e903";
+        }
+        
+        a {
+            &:hover {
+                .desktop & {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+    &--arrowdown {
+        a {
+            display: inline-block;
+            font-size: rem(50);
+            transform: rotate(90deg);
+            
+            @media ( max-width: $base--narrow + px ) {
+            	font-size: base-narrow(50);
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	display: none;
+            }
+        }
+    }
 }

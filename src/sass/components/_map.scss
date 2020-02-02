@@ -15,6 +15,14 @@
     @extend %rel;
     margin: 80px 0 10px 0;
     
+    @media ( max-width: $tablet_portrait + px ) {
+    	width: calc(100% + 20px);
+    	margin: {
+        	left: -10px;
+        	right: -10px;
+        }
+    }
+    
     &__area {
         height: 540px;
 
@@ -27,17 +35,21 @@
         @extend %abs;
         @extend %abs-x;
         top: 0;
-        width: 820px;
+        width: 860px;
         height: 100%;
-        padding: 50px 0 0 0;
+        padding: 50px 20px 0 20px;
         text-align: right;
+        
+        @media ( max-width: 860px ) {
+        	width: 100%;
+        }
     }
     
     &__info {
         @extend %flex-inline;
         @extend %flex-column;
         @extend %anim;
-        width: 360px;
+        min-width: 360px;
         background-color: white;
         padding: 30px;
         border-radius: 12px;
@@ -67,10 +79,7 @@
         address {
             margin-bottom: 30px;
 
-            p {
-                line-height: 30px;
-                font-size: rem(18);
-            }
+            
         }
         
         h4 {
@@ -80,11 +89,22 @@
             color: $c-pink-01;
         }
         
+        p {
+                line-height: 30px;
+                font-size: rem(18);
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    line-height: 1.6em;
+                	font-size: tablet_portrait(28);
+                }
+            }
+        
         .golink {
             font: {
-                size: rem(18);
                 weight: $semibold;
             }
+            
+            
             
             &:after {
                 margin-left: 5px;

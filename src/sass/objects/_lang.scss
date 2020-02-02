@@ -1,6 +1,10 @@
 .o-lang {
     @extend %flex;
     letter-spacing: -.5px;
+    
+    @media ( max-width: $tablet + px ) {
+        justify-content: center;
+    }
 
     li {
         margin: 0 5px;
@@ -27,9 +31,15 @@
         text-transform: uppercase;
         font: {
             size: rem(14);
-            weight: $medium;
+            weight: $semibold;
         }
         color: $c-black-02;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	width: tablet_portrait(88); height: tablet_portrait(88);
+            border-width: tablet_portrait(5);
+        	font-size: tablet_portrait(36); 
+        }
         
         &:hover {
             .desktop & {

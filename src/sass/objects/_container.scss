@@ -1,4 +1,9 @@
 .o-container {
     max-width: 1920px;
     padding: 0 10px;
+    overflow: hidden;
+    
+    @media ( max-width: $tablet_portrait + px ) {
+    	padding: 0 10px;
+    }
 } 

@@ -2,6 +2,10 @@
     
     input[type=email] {
         border-radius: 6px 0 0 6px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            border-radius: tablet_portrait(12) 0 0 tablet_portrait(12);
+        }
     }
     
     &__form {
@@ -9,18 +13,31 @@
         width: 520px;
         margin: 0 auto 10px auto;
         box-shadow: 0 12px 24px -6px rgba(#0A2242, .26);
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	width: 100%;
+        	max-width: 650px;
+        }
+    }
+    
+    .o-article {
+        padding: {
+            left: 20px;
+            right: 20px;
+        }
     }
     
     .o-btn {
         height: 57px;
         border-radius: 0 6px 6px 0;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            height: tablet_portrait(88);
+            border-radius: 0 tablet_portrait(12) tablet_portrait(12) 0;
+        }
     }
 
     .o-section {
         background-color: $c-gray-04;
-    }
-    
-    .o-article {
-        margin-bottom: 50px;
     }
 }

@@ -5,19 +5,38 @@ const enableBodyScroll = bodyScrollLock.enableBodyScroll;
 document.addEventListener('DOMContentLoaded',function() {
 
     const el = document.getElementsByClassName('js-nav')[0],
-          nav = document.getElementsByClassName('js-children'),
           menu = document.getElementsByClassName('js-menu')[0],
-          hamburger = document.getElementsByClassName('js-hamburger')[0],
-          parent = el.getElementsByTagName('li');
+          hamburger = document.getElementsByClassName('js-hamburger')[0];
 
     const init = function() {
 
-        let ww = 0;
+        let ww = 0, wh = 0, nh = 0;
+        const apla = document.getElementsByClassName('js-apla')[0];
         
-/*
-        const searchform = document.getElementById('searchform'),
-        	  searchform__content = document.getElementById('searchform__content');
-*/
+        const checkHeight = function() {
+            
+            wh = window.innerHeight;                     
+            
+            // if height of navigate is bigger than window 
+                        
+            if (nh > wh) {
+                
+                el.style.height = wh - 30 + 'px';
+                
+            } else {
+                
+                el.removeAttribute('style');
+                
+            }            
+        }
+        
+        const clickOutside = function(e) {
+                        
+            if (e.target.classList.contains('js-apla')) {
+                
+                hideMenu();
+            }
+        };
 
         const checkWindowWidth = function() {
             ww = window.innerWidth;
@@ -26,26 +45,27 @@ document.addEventListener('DOMContentLoaded',function() {
 
                 hideMenu();
             }
-        }
+        };
         
         const hideMenu = function() {
 
-            enableBodyScroll(el);
+            document.removeEventListener('click', clickOutside);
+            
+            apla.classList.remove('is-black');
+            setTimeout(function() {
+                
+                apla.classList.remove('is-visible');
+                
+            }, 600);
+            
             el.classList.remove('is-visible');
+            el.removeAttribute('style');
             hamburger.classList.remove('is-active');
-
-            for (let i = 0; i < nav.length; i ++) {
-                nav[i].classList.remove('is-active');
-            }
             
-            //cutme.Helpers.detach(searchform__content, searchform);
-            //searchform__content.classList.remove('is-visible');
+            window.removeEventListener('resize', checkHeight);
+            el.removeAttribute('style');
             
-            let parent = el.getElementsByClassName('menu-item-has-children');
-            
-            for (let i = 0; i < parent.length; i ++) {
-                parent[i].classList.remove('is-active');
-            }
+            enableBodyScroll(el);
         };
 
         const showMenu = function(e) {
@@ -56,17 +76,24 @@ document.addEventListener('DOMContentLoaded',function() {
             
             } else {
             
+                document.addEventListener('click', clickOutside);
+                
                 disableBodyScroll(el);
+                
+                apla.classList.add('is-visible');
+                setTimeout(function() {
+                    
+                    apla.classList.add('is-black');
+                    
+                }, 10);
+                
                 el.classList.add('is-visible');
                 hamburger.classList.add('is-active');
                 
-                //cutme.Helpers.detach(searchform__content, el);
+                nh = el.clientHeight;
+                checkHeight();
                 
-               /*
- setTimeout(function() {
-	                searchform__content.classList.add('is-visible');
-                }, 100);
-*/
+                window.addEventListener('resize', checkHeight);
             }
         };
 
@@ -77,37 +104,6 @@ document.addEventListener('DOMContentLoaded',function() {
         checkWindowWidth();
 
         hamburger.addEventListener('click', showMenu);
-
-
-        const parent = menu.getElementsByTagName('li');
-
-        const submenu = function(e) {
-        
-            if (ww <= 1024) {
-                let item = e.currentTarget;
-               
-                e.stopPropagation();
-                
-                if (item.classList.contains('menu-item-has-children')) {
-                    if (item.classList.contains('is-active')) {
-                        item.classList.remove('is-active');
-                    } else {
-                        item.classList.add('is-active');
-                    }
-                } else {
-                    let url = item.getElementsByTagName('a')[0].getAttribute('href');
-                    window.open(url, '_self');
-                    hideMenu();
-                }
-
-                e.preventDefault() ? e.preventDefault() : e.preventDefault = false;
-            }
-        }
-
-
-        for (let j = 0; j < parent.length; j++) {
-            parent[j].addEventListener('click', submenu);
-        }
 
 
         // Hide menu on ESC

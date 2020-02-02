@@ -3,7 +3,12 @@
 }
 
 @function base($target) {
-	$vw-context: (($base + 80) * 0.01);
+	$vw-context: (($base + 100) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function base-narrow($target) {
+	$vw-context: (($base--narrow + 100) * 0.01);
 	@return ($target / $vw-context) * 1vw;
 }
 
@@ -14,6 +19,11 @@
 
 @function tablet_portrait($target) {
 	$vw-context: (($tablet_portrait) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function smartphone_portrait($target) {
+	$vw-context: (($smartphone_portrait) * 0.01);
 	@return ($target / $vw-context) * 1vw;
 }
 

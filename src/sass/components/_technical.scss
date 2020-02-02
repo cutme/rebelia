@@ -1,47 +1,74 @@
 .c-technical {
-    
+
     .o-article {
         letter-spacing: -1px;
     }
-    
+
     .o-box {
         padding: 20px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            padding: tablet_portrait(20) tablet_portrait(50);
+        }
     }
-    
+
     table {
         width: 100%;
-        
+
         tr {
             &:not(:last-of-type) {
                 border-bottom: 1px solid $c-gray-03;
+            }  
+            
+            th, td {
+                width: 100%;
+                padding: 30px 20px;
+                vertical-align: top;
+                text-align: left;
+                
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    width: 50%;
+                }                
             }
-        }
-        
-        th, td {
-            width: 50%;
-            padding: 30px 20px;
-            vertical-align: top;
-            text-align: left;
-        }
-
-        th {
-            font: {
-                size: rem(21);
-                weight: $bold;
-            }
-            color: $c-blue-05;
-        }
-        
-        td {
-
-            p {
-                line-height: 34px;
-                font-size: rem(18);
+    
+            th {
+                font: {
+                    size: rem(21);
+                    weight: $bold;
+                }
+                color: $c-blue-05;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	font-size: tablet_portrait(30);
+                	padding: tablet_portrait(20) 0 0 0;
+                }
             }
             
-            strong {
-                font-weight: $semibold
+            td {
+                @media ( max-width: $tablet_portrait + px ) {
+                    padding: tablet_portrait(20) 0 tablet_portrait(40) 0;
+                }
+    
+                p {
+                    line-height: 34px;
+                    font-size: rem(18);
+                    
+                    @media ( max-width: $tablet_portrait + px ) {
+                        line-height: 1.8em;
+                    	font-size: tablet_portrait(28);
+                    }
+                }
+                
+                strong {
+                    font-weight: $semibold
+                }
             }
-        }
+            
+            &:not(:first-of-type) {
+                th {
+                    padding-top: tablet_portrait(40);
+                }                    
+            }
+        }        
     }
 }

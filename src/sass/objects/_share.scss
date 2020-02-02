@@ -3,12 +3,28 @@
         @extend %flex;
         @extend %flex-x;
         
+        @media ( max-width: $tablet_portrait + px ) {
+            width: 80%;
+            margin: 0 auto;
+        	justify-content: justify-content;
+        }
+        
         li {
-            margin: 0 15px;
+            
+            @media ( min-width: $tablet_portrait + 1px ) {
+                margin: 0 15px;
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	text-align: center;
+            }
             
             a {
-                @extend %flex;
-                @extend %flex-y;
+                
+                @media ( min-width: $tablet_portrait + 1px ) {
+                	display: flex;
+                	align-items: center;
+                }
                 
                 &:hover {
                     .desktop & {
@@ -45,12 +61,21 @@
                     weight: $medium;
                 }
                 color: $c-blue-07;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	display: block;
+                	font-size: tablet_portrait(26);
+                }
             }
         }
         
         [class^="icon-"] {
             margin-right: 10px;
             font-size: rem(32);
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	font-size: tablet_portrait(64);
+            }
         }
         
         .icon-heart {

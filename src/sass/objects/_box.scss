@@ -4,6 +4,10 @@
     border: 1px solid $c-gray-03;
     border-radius: 12px;
     
+    @media ( max-width: $tablet_portrait + px ) {
+    	border-radius: tablet_portrait(24);
+    }
+    
     &:hover {
         .desktop & {     
             .o-photo {
@@ -14,9 +18,26 @@
         }
     }
     
+    .category {
+        margin-bottom: 4px;
+        font-size: rem(16);
+        color: $c-pink-01;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	font: {
+            	size: tablet_portrait(28);
+            	weight: $medium;
+            }
+        }
+    }
+    
     figcaption {
         padding: 30px;
         letter-spacing: -.5px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	padding: tablet_portrait(50) tablet_portrait(60);
+        }
         
         a {
             color: $c-blue-01;
@@ -30,19 +51,18 @@
             &:visited {
                 color: $c-blue-03;
             }
-        }
-        
-        .category {
-            margin-bottom: 4px;
-            font-size: rem(16);
-            color: $c-pink-01;
-        }
+        }        
         
         .date {
             opacity: .5;
             padding-top: 90px;
             font-size: rem(16);
             color: $c-blue-04;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                padding-top: tablet_portrait(90);
+            	font-size: tablet_portrait(28);
+            }
         }
         
         .more-reviews {
@@ -50,6 +70,10 @@
             font: {
                 size: rem(18);
                 weight: $medium;
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	font-size: tablet_portrait(28);
             }
             
             a {
@@ -67,11 +91,23 @@
         .review {
             line-height: 34px;
             font-size: rem(18);
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                text-align: center;
+                line-height: 1.5em;
+                letter-spacing: -1px;
+            	font-size: tablet_portrait(32);
+            }
         }
         
         .title {
             @extend %lead--6;
+            font-weight: $semibold;
             color: $c-blue-05; 
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	font-size: tablet_portrait(32);
+            }
         }
     }
     

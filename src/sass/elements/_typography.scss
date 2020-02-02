@@ -41,12 +41,17 @@ strong {
 
 
 hr {
-    width: calc(100% - 20px);
+    width: calc(100% + 20px);
     background-color: $c-gray-03;
     border-top: 0;
-    margin: 0 10px;
+    margin: 0 -10px;
     display: block;
     height: 1px;
+    
+    @media ( min-width: $tablet_portrait + 1px ) {
+    	width: calc(100% - 20px);
+    	margin: 0 10px;
+    }
 }
 
 

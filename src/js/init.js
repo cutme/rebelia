@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded',function() {
         document.getElementById('news') ? window.newsCarousel() : false;
         document.getElementById('played') ? window.playedCarousel() : false;
         document.getElementById('reviews') ? window.reviewsCarousel() : false;
-        document.getElementById('trailers') ? window.trailersCarousel() : false;
+        document.getElementById('watchtrailers') ? window.watchtrailersCarousel() : false;
 
         // Filters
         
