@@ -23,6 +23,8 @@
 	&__bar {
     	width: 100%;
     	height: 62px;
+	    max-width: 1920px;
+        margin: 0 auto;
     	background-color: $c-gray-02;
     	border-radius: 6px;
     	
