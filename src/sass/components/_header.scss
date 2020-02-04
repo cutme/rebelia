@@ -9,17 +9,16 @@
         @extend %flex-column;
         @extend %flex-wrap;
         @extend %flex-xy;
-        min-height: 100vh;
         padding: {
-            top: 100px;
-            bottom: 40px;
+            top: 160px;
+            bottom: 190px;
         }
         color: white;
         
         @media ( max-width: $tablet_portrait + px ) {
             padding: {
-                top: tablet_portrait(140);
-                bottom: tablet_portrait(80);
+                top: tablet_portrait(160);
+                bottom: tablet_portrait(190);
             }
         }
     }
@@ -28,6 +27,7 @@
         
         .o-btn {
             height: 70px;
+            font-size: rem(26);
             
             @media ( max-width: $tablet_portrait + px ) {
                 height: tablet_portrait(96);
@@ -35,7 +35,7 @@
             }
             
             [class^="icon-"] {
-                margin: 0 0 0 10px;
+                margin: 2px 0 0 10px;
                 font-size: rem(142);
                 
                 @media ( max-width: $tablet_portrait + px ) {
@@ -63,11 +63,11 @@
     }
     
     &__title {
-        margin-bottom: 130px;
+        margin-bottom: 125px;
         text-align: center;
         
         @media ( max-width: $base--narrow + 100px ) {
-            margin-bottom: base-narrow(130);
+            margin-bottom: base-narrow(125);
         }
         
         @media ( max-width: $tablet_portrait + px ) {
