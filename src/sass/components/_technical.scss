@@ -22,7 +22,7 @@
             
             th, td {
                 width: 100%;
-                padding: 30px 20px;
+                padding: 35px 10px;
                 vertical-align: top;
                 text-align: left;
                 
@@ -50,7 +50,7 @@
                 }
     
                 p {
-                    line-height: 34px;
+                    line-height: 1.9em;
                     font-size: rem(18);
                     
                     @media ( max-width: $tablet_portrait + px ) {
@@ -64,9 +64,9 @@
                 }
             }
             
-            &:not(:first-of-type) {
-                th {
-                    padding-top: tablet_portrait(40);
+            &:first-of-type {
+                th, td {
+                    padding-top: 15px;
                 }                    
             }
         }        

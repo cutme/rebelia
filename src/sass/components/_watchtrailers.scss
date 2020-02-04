@@ -3,6 +3,14 @@
     margin: 0 -10px;
     text-align: center;
     
+    .o-trailer {
+        &__video {
+            &:after {
+                width: 120px; height: 84px;
+            }
+        }
+    }
+
     .o-wrap {
         overflow: hidden;
         max-width: 820px;

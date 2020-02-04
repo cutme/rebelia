@@ -21,10 +21,11 @@ const templateFileMapper = [
     { template: "./src/index.ejs", file: "index.html" },
     { template: "./src/jobs.ejs", file: "jobs.html" },
     { template: "./src/join.ejs", file: "join.html" },
+    { template: "./src/join-thanks.ejs", file: "join-thanks.html" },
     { template: "./src/junk-yard.ejs", file: "junk-yard.html" },
     { template: "./src/news.ejs", file: "news.html" },
     { template: "./src/news-single.ejs", file: "news-single.html" },
-    { template: "./src/press.ejs", file: "press.html" } 
+    { template: "./src/press.ejs", file: "press.html" }
 ]
 
 

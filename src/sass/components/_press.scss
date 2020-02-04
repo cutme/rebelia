@@ -8,7 +8,7 @@
         }
 
         .title {
-            margin-bottom: .5em;
+            margin-bottom: .4em;
             font: {
                 size: rem(32);
                 weight: $extrabold;
@@ -38,13 +38,16 @@
                 font-size: rem(16);
                 color: $c-blue-05;
                 white-space: nowrap;
+                opacity: .5;
             }
             
             td, th {
+                line-height: 1.9em;
                 padding: {
-                    top: 10px;
-                    bottom: 10px;
+                    top: 12px;
+                    bottom: 12px;
                 }
+                font-weight: $medium;
                 
                 @media ( max-width: $tablet_portrait + px ) {
                     line-height: 44px;
@@ -55,16 +58,58 @@
             
             td {
                 letter-spacing: -1px;
-                
+                font-size: rem(18);
+
                 @media ( max-width: $tablet_portrait + px ) {
                      padding-top: 0;
                 }
             }
             
             th {
+                font-size: rem(16);
+                
                 @media ( max-width: $tablet_portrait + px ) {
                     padding-bottom: 0;
                     padding-top: 20px;
+                }
+            }
+        }
+    }
+    
+    &__pagination {
+        @extend %flex;
+        @extend %flex-spacebetween;
+        margin-top: 20px;
+                
+        a {
+            letter-spacing: -1px;
+
+            &:before {
+                font: {
+                    family: $rebelia;
+                    weight: $semibold;
+                    size: rem(12);
+                }
+            }
+            color: $c-blue-01;
+            
+            &:hover {
+                color: $c-blue-02;
+            }
+            
+            &:active {
+                color: $c-blue-03 !important;
+            }
+            
+            font: {
+                size: rem(18);
+                weight: $semibold;
+            }
+            
+            &.previous {
+                &:before {
+                    margin-right: 10px;
+                    content: "\e902";
                 }
             }
         }

@@ -50,7 +50,8 @@
 
 a.o-btn,
 button.o-btn {    
-    
+    color: white;
+
     &:not(.o-btn--violet) {
         &:active {
             background-color: $c-blue-03 !important;

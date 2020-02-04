@@ -27,10 +27,10 @@
     }
     
     &--margin {
-        margin-bottom: 50px;
+        margin-bottom: 45px;
         
         @media ( max-width: $tablet_portrait + px ) {
-        	margin-bottom: tablet_portrait(50);
+        	margin-bottom: tablet_portrait(45);
         }
     }
     
@@ -62,7 +62,7 @@
         
         h2 {
             @extend %lead--2;
-            margin: 1em 0 .2em 0;
+            margin: 1.1em 0 .3em 0;
             color: $c-black-01;
             
             @media ( max-width: $tablet_portrait + px ) {
@@ -89,6 +89,8 @@
         }
         
         p {
+            line-height: 1.7em;
+            
             @media ( max-width: $tablet_portrait + px ) {
             	font-size: tablet_portrait(28);
             }

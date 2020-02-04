@@ -59,6 +59,15 @@
     }
     
     &--big {
+        
+        .o-trailer {
+            &__video {
+                &:after {
+                    width: 120px; height: 84px;
+                }
+            }
+        }
+        
         .main-carousel {
             max-width: 820px;
             margin: {

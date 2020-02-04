@@ -1,6 +1,7 @@
 .c-download {
     @extend %flex;
     width: 100%;
+    min-height: 350px;
     margin: 0 auto 70px auto;
     
     @media ( max-width: $tablet_portrait + px ) {
@@ -15,6 +16,7 @@
     .title,
     .subtitle {
         line-height: 27px;
+        line-height: 1.3em;
         font-size: rem(22);
         color: $c-blue-05;
         
@@ -29,7 +31,7 @@
     }
     
     .o-article {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         
         @media ( max-width: $tablet_portrait + px ) {
             margin-bottom: tablet_portrait(60);

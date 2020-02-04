@@ -36,11 +36,11 @@
             
         ul {
             @extend %flex;
-            height: 40px;
+            height: 100%;
             
             .c-hometrailers & {
                 @media ( min-width: $tablet + 1px ) and ( max-width: $base--narrow + px ) {
-                	height: 30px;
+                	//height: 30px;
                 }
             }
             
@@ -94,7 +94,7 @@
             @extend %flex-xy;
             @extend %rel;
             height: 100%;
-            padding: 0 25px 2px 25px;
+            padding: 0 28px 2px 28px;
             letter-spacing: -.5px;
             font: {
                 size: rem(18);

@@ -20,10 +20,10 @@
     }
     
     .big {
-        margin-bottom: 50px;
+        margin-bottom: 60px;
         
         @media ( max-width: $base--narrow + 100px ) {
-        	margin-bottom: base-narrow(50);
+        	margin-bottom: base-narrow(60);
         }
         
         @media ( max-width: $tablet_portrait + px ) {
