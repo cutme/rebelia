@@ -11,9 +11,7 @@
     transform: translate3d(0, -100%, 0);
     
     &.is-visible {
-        @media ( min-width: $tablet + 1px ) {
-            transform: translate3d(0, 0, 0);	
-        }
+        transform: translate3d(0, 0, 0);	
     }
     
     .is-loaded & {
@@ -21,8 +19,8 @@
     }
 
     [class^="icon-"] {
-        margin: 0 0 0 15px;
-        font-size: rem(82);
+        margin: 2px 0 0 6px;
+        font-size: rem(94);
     }
     
     p {

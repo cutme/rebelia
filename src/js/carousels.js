@@ -5,6 +5,25 @@ const utils = require('fizzy-ui-utils');
 
 document.addEventListener('DOMContentLoaded',function() {
     
+    const disablePointerEvents = function(container, flkty) {
+        flkty.on('dragStart', function() {
+            let video = container.getElementsByClassName('js-video');
+            
+            for (let i = 0; i < video.length; i++) {
+                video[i].style.pointerEvents = 'none';
+            }            
+        });
+        
+        flkty.on('dragEnd', function() {
+            let video = container.getElementsByClassName('js-video');
+            
+            for (let i = 0; i < video.length; i++) {
+                video[i].style.pointerEvents = 'all';
+            }            
+        });
+    };
+
+
     if (typeof Flickity === 'function') {
 
       var proto = Flickity.prototype;
@@ -70,7 +89,6 @@ document.addEventListener('DOMContentLoaded',function() {
       }
     }
     
-
 
     const controls = function(container, arg) {
 
@@ -147,11 +165,9 @@ document.addEventListener('DOMContentLoaded',function() {
                     groupCells: 2,
                 },
                 mobile: {
-                    groupCells: 1,
+                    freeScroll: true
                 }
-            },
-            prevNextButtons: false,
-            pageDots: false,
+            }
         });
 
 
@@ -164,7 +180,8 @@ document.addEventListener('DOMContentLoaded',function() {
 
         window.playedflkty = new Flickity( played, {
             prevNextButtons: false,
-            pageDots: false
+            pageDots: false,
+            draggable: false
         });
     };
     
@@ -181,26 +198,33 @@ document.addEventListener('DOMContentLoaded',function() {
                     groupCells: 2,
                 },
                 mobile: {
-                    groupCells: 1,
+                    freeScroll: true
                 }
-            },
-            prevNextButtons: false,
-            pageDots: false,
+            }
         });
 
         controls(reviews, reviewsflkty);
     };
     
+
     
     window.watchtrailersCarousel = function() {
         
         const watchtrailers = document.getElementById('watchtrailers');
 
         const watchtrailersflkty = new Flickity( watchtrailers, {
-            prevNextButtons: false,
-            pageDots: false
+             watchCSS: {
+                desktop: {
+                    cellAlign: 'left',
+                    contain: true,
+                },
+                mobile: {
+                    freeScroll: true
+                }
+            }            
         });
-
+        
+        disablePointerEvents(watchtrailers, watchtrailersflkty);
         controls(watchtrailers, watchtrailersflkty);
     };
     

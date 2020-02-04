@@ -70,40 +70,71 @@
         &.is-active {
             .item {
                 color: white;
+                
+                &:before {
+                    opacity: 0;
+                }
+            }
+            
+            & + li {
+                .item {
+                    &:before {
+                        opacity: 0;
+                    }
+                }
             }
         }
         
         @media ( max-width: $tablet_portrait + px ) {
             flex: 1;
         }
-    }
-    
-    .item {
-        @extend %flex;
-        @extend %flex-xy;
-        height: 100%;
-        padding: 0 20px 2px 20px;
-        letter-spacing: -.5px;
-        font: {
-            size: rem(18);
-            weight: $medium;
-        }
-        color: $c-black-04;
-        cursor: pointer;
         
-        .c-hometrailers & {
-            @media ( min-width: $tablet + 1px ) and ( max-width: $base--narrow + px ) {
-                padding: 0 10px 2px 10px;
-                font-size: rem(16);
+        .item {
+            @extend %flex;
+            @extend %flex-xy;
+            @extend %rel;
+            height: 100%;
+            padding: 0 25px 2px 25px;
+            letter-spacing: -.5px;
+            font: {
+                size: rem(18);
+                weight: $medium;
+            }
+            color: $c-black-04;
+            cursor: pointer;
+            
+            &:before {
+                @extend %abs-pseudo;
+                @extend %anim;
+                top: 4px;
+                left: 0;
+                content: '·';
+            }
+            
+            .c-hometrailers & {
+                @media ( min-width: $tablet + 1px ) and ( max-width: $base--narrow + px ) {
+                    padding: 0 10px 2px 10px;
+                    font-size: rem(16);
+                }
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                padding: 0 tablet_portrait(20) 2px tablet_portrait(20);
+                letter-spacing: normal;
+            	font-size: tablet_portrait(20);
             }
         }
         
-        @media ( max-width: $tablet_portrait + px ) {
-            padding: 0 tablet_portrait(20) 2px tablet_portrait(20);
-            letter-spacing: normal;
-        	font-size: tablet_portrait(20);
+        &:first-child {
+            .item {
+                &:before {
+                    display: none;
+                }
+            }
         }
     }
+    
+    
     
     &--dark {
         .c-filters__content {

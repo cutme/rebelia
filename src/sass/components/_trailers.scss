@@ -66,6 +66,15 @@
                 right: auto;
             }
             
+            &:after {
+                display: none;
+                content: 'flickity.desktop';
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    content: 'flickity.mobile';
+                }
+            }
+            
             @media ( max-width: $tablet_portrait + px ) {
                 width: auto;
             	max-width: 560px;

@@ -36,14 +36,18 @@
         	.carousel-cell {
             	width: grid(620, 768);
             	margin: 0 tablet_portrait(18);
-            	
             	transition: opacity .3s ease-out;
-                //width: 100%;
                 opacity: .5;
                 
                 &.is-selected {
                     opacity: 1;
                 }
+            }
+        }
+        
+        .flickity-button {
+            @media ( max-width: $tablet_portrait + px ) {
+            	display: none;
             }
         }
     }
@@ -90,27 +94,52 @@
 
 
 .flickity-page-dots {
-    text-align: right;
+    @extend %flex;
+    display: none !important;
     
+    @media ( max-width: $tablet_portrait + 1px ) {
+    	display: flex !important;
+    	justify-content: center;
+    	margin-top: 30px;
+    }
+        
     .dot {
-        display: inline-block;
-        width: 6px; height: 6px;
-        background-color: $c-black-01;
+        width: 10px; height: 10px;
+        border: 1px solid $c-black-02;
         border-radius: 50%;
-        margin: 0 3px;
-        opacity: .6;
+        
+        &:not(:first-of-type) {
+            margin-left: 10px;
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            width: tablet_portrait(20); height: tablet_portrait(20);
+        }
         
         &.is-selected {
-            opacity: 1;
+            background-color: $c-black-02;
         }
     }
 }
 
+
+.o-controls {
+    .flickity-page-dots {
+        @media ( min-width: $tablet_portrait + 1px ) {
+        	display: flex !important;
+        }
+    }
+}
+
+
 .flickity-button {
+/*
     width: 48px; height: 48px;
     border: 2px solid $c-black-02;
     border-radius: 50%;
     font-size: rem(30);
+*/
+    display: none;
 }
 
 

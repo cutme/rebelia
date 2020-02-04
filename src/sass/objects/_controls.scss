@@ -5,8 +5,9 @@
     justify-content: flex-end;
     
     @media ( max-width: $tablet_portrait + px ) {
-    	justify-content: center;
-    	margin-top: 30px;
+        display: none;
+    	//justify-content: center;
+    	//margin-top: 30px;
     }
     
     i {
@@ -46,7 +47,8 @@
         }            
     }
     
-    .dots {
+    /*
+.dots {
         @extend %flex;
         
         .dot {
@@ -67,4 +69,5 @@
             }
         }
     }
+*/
 } 

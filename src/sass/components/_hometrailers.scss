@@ -4,11 +4,11 @@
 
         h2 {
             @extend %lead--2;
-            margin-bottom: 30px;
+            //margin-bottom: 30px;
             line-height: 1.25em;
             
             @media ( max-width: $tablet_portrait + px ) {
-            	margin-bottom: tablet_portrait(30);
+            	//margin-bottom: tablet_portrait(30);
             }
         }
         
@@ -23,8 +23,8 @@
     }
 
     .c-filters {
-        margin-bottom: 30px;
-        margin-top: 20px;
+        margin-bottom: 35px !important;
+        margin-top: 25px;
     }
     
     .o-cols {
@@ -55,7 +55,7 @@
                 }
                 
                 .o-article {
-                    margin-bottom: 30px;
+                    margin-bottom: 40px;
                     
                     @media ( max-width: $tablet_portrait + px ) {
                         margin-bottom: tablet_portrait(50);
@@ -92,10 +92,20 @@
             }
         }
     }
+    
+    .o-trailer {
+        .o-article {
+            p {
+                line-height: 32px;
+                font-size: rem(24);
+                color: $c-blue-04;
+            }
+        }
+    }
 
     .main-carousel {
         width: 440px;
-        margin: 0 auto 50px auto;
+        margin: 0 auto 30px auto !important;
         
         @media ( max-width: $tablet_portrait + px ) {
             width: auto;
@@ -107,13 +117,5 @@
         width: 100%;
     }
     
-    .o-trailer {
-        .o-article {
-            p {
-                line-height: 32px;
-                font-size: rem(24);
-                color: $c-blue-04;
-            }
-        }
-    }
+    
 }

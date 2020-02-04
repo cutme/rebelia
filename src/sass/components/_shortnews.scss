@@ -13,7 +13,23 @@
         figcaption {
             font-weight: $semibold;
         }
-    }  
+    }
+    
+    .o-more {
+        padding-top: 10px;
+    }
+    
+    .o-photo {
+       
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @media ( min-width: $tablet_portrait + 1px ) {
+            height: 210px;
+        }
+    }
     
     .o-wrap {
         overflow: hidden;
