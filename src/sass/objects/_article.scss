@@ -30,7 +30,7 @@
         margin-bottom: 45px;
         
         @media ( max-width: $tablet_portrait + px ) {
-        	margin-bottom: tablet_portrait(45);
+        	margin-bottom: tablet_portrait(50);
         }
     }
     
@@ -114,4 +114,5 @@
             }
         }
     }
+    
 }

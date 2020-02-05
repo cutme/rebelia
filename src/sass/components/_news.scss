@@ -2,16 +2,24 @@
     
     &__list {
         & > li {
-            margin-bottom: 30px;
+            //margin-bottom: 30px;
 
             &:not(:last-of-type) {
                 margin-bottom: 120px;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	margin-bottom: tablet_portrait(130);
+                }
             }
         }
     }
     
     .c-filters {
         margin-bottom: 100px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            margin-bottom: tablet_portrait(130);
+        }
         
         .item {
             @media ( max-width: $tablet_portrait + px ) {
@@ -28,8 +36,8 @@
             margin: -41px auto 15px auto;
             
             @media ( max-width: $tablet_portrait + px ) {
-            	width: tablet_portrait(82); height: tablet_portrait(82);
-            	margin: tablet_portrait(-45) auto tablet_portrait(10) auto;
+            	width: tablet_portrait(104); height: tablet_portrait(104);
+            	margin: tablet_portrait(-45) auto tablet_portrait(25) auto;
             }
         }       
     }
@@ -43,7 +51,7 @@
             padding: 40px 80px;
             
             @media ( max-width: $tablet_portrait + px ) {
-                padding: 30px tablet_portrait(50);
+                padding: tablet_portrait(50) tablet_portrait(50) tablet_portrait(40) tablet_portrait(50);
             }
             
             p {
@@ -64,6 +72,17 @@
     
     .o-share {
         padding: 50px 0 50px 0;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	padding: tablet_portrait(50) 0;
+        }
+    }
+    
+    .o-wrap {
+        @media ( max-width: $tablet_portrait + px ) {
+        	max-width: 100%;
+        	padding: 0;
+        }
     }
     
     .author {
@@ -79,7 +98,7 @@
         padding: 0 80px;
         
         @media ( max-width: $tablet_portrait + px ) {
-            padding: 20px tablet_portrait(50);
+            padding: 0 tablet_portrait(50);
         }
     }
 
@@ -93,6 +112,13 @@
             weight: $bold;
         }
         color: $c-blue-05;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            margin-bottom: tablet_portrait(50);
+            padding: 0 tablet_portrait(50);
+            line-height: 1.5em;
+        	font-size: tablet_portrait(40);
+        }
     }    
     
     
