@@ -6,7 +6,14 @@
     .o-trailer {
         &__video {
             &:after {
-                width: 120px; height: 84px;
+                width: tablet_portrait(120); height: tablet_portrait(84);
+            }
+            
+            &--big {
+                @media ( max-width: $tablet_portrait + px ) {
+                	max-width: 100%;
+                	//width: grid(620, $tablet_portrait);
+                }
             }
         }
     }
@@ -18,7 +25,25 @@
         
         @media ( max-width: $tablet_portrait + px ) {
         	max-width: 100%;
-        	
+        	padding: 0;
+        }
+        
+        & > .o-article {
+            @media ( max-width: $tablet_portrait + px ) {
+                padding: {
+                    left: grid(50, $tablet_portrait);
+                    right: grid(50, $tablet_portrait);
+                }
+            }
+        }
+    }
+    
+    .o-section {
+        @media ( max-width: $tablet_portrait + px ) {
+        	padding: {
+            	left: 0;
+            	right: 0;
+        	}
         }
     }
     
@@ -27,27 +52,23 @@
     }
     
     .main-carousel {
-        
-        @media ( max-width: $tablet_portrait + px ) {
-        	margin-bottom: tablet_portrait(50);
-        }
-        
         .carousel-cell {
 
             @media ( max-width: $tablet_portrait + px ) {
-            	max-width: 620px;
-            	margin: 0 tablet_portrait(18);
-            }
-            
-            @media ( max-width: $tablet_portrait + px ) {
             	transition: opacity .3s ease-out;
-                width: 80%;
+                width: grid(620, $tablet_portrait);
                 opacity: .5;
                 
                 &.is-selected {
                     opacity: 1;
                 }
             }
-        } 
+        }
+        
+        .flickity-page-dots {
+            @media ( max-width: $tablet_portrait + px ) {
+                margin-bottom: 0;
+            }
+        }
     }
 }

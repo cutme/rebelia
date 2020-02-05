@@ -28,19 +28,5 @@
         }
     }
     
-    &--arrowdown {
-        a {
-            display: inline-block;
-            font-size: rem(50);
-            transform: rotate(90deg);
-            
-            @media ( max-width: $base--narrow + px ) {
-            	font-size: base-narrow(50);
-            }
-            
-            @media ( max-width: $tablet_portrait + px ) {
-            	display: none;
-            }
-        }
-    }
+    
 }

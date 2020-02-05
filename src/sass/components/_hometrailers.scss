@@ -5,6 +5,7 @@
         h2 {
             @extend %lead--2;
             //margin-bottom: 30px;
+            letter-spacing: -1.1px;
             line-height: 1.25em;
             
             @media ( max-width: $tablet_portrait + px ) {
@@ -25,6 +26,10 @@
     .c-filters {
         margin-bottom: 35px !important;
         margin-top: 25px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	margin-bottom: tablet_portrait(50) !important;
+        }
     }
     
     .o-cols {
@@ -102,6 +107,10 @@
             }
         }
     }
+    
+    .carousel-cell {
+        width: 100%;
+    }
 
     .main-carousel {
         width: 440px;
@@ -110,12 +119,7 @@
         @media ( max-width: $tablet_portrait + px ) {
             width: auto;
         	max-width: 560px;
+        	margin: 0 auto tablet_portrait(50) auto !important;
         }
     }
-    
-    .carousel-cell {
-        width: 100%;
-    }
-    
-    
 }

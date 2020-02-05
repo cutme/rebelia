@@ -7,63 +7,12 @@
     	padding: 0 30px;
     }
     
-    @media ( max-width: $tablet_portrait + px ) {
-    	width: calc(100% + 20px);
-    	margin: 0 -10px;
-    }
-    
-    &--dark {
-        background-color: $c-black-03;
-        color: white;
-    }
-    
-    &--gray {
-        background-color: $c-gray-01;
-        
-        p {
-            color: $c-blue-04;
-        }
-    }
-
-    .c-filters {
-        margin-bottom: 50px;
-        
-        @media ( max-width: $tablet_portrait + px ) {
-        	margin-bottom: tablet_portrait(50);
-        }
-    }
-    
-    .o-section {
-        @media ( max-width: $tablet_portrait + px ) {
-    	    max-width: 650px;
-            margin: 0 auto;
-        }
-    }
-    
-    .o-trailer {
-
-        .o-article {
-            
-            p {
-                color: $c-gray-08;
-            }
-        }
-    }
-    
-    .main-carousel {
-        margin-bottom: 50px;
-        
-        @media ( max-width: $tablet_portrait + px ) {
-        	margin-bottom: tablet_portrait(50);
-        }        
-    }
-    
     &--big {
         
         .o-trailer {
             &__video {
                 &:after {
-                    width: 120px; height: 84px;
+                    width: tablet_portrait(120); height: tablet_portrait(84);
                 }
             }
         }
@@ -98,4 +47,49 @@
             }
         }
     }
+    
+    &--dark {
+        background-color: $c-black-03;
+        color: white;
+    }
+    
+    &--gray {
+        background-color: $c-gray-01;
+        
+        p {
+            color: $c-blue-04;
+        }
+    }
+
+    .c-filters {
+        margin-bottom: 50px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	margin-bottom: tablet_portrait(50);
+        }
+    }
+    
+    .o-section {
+        
+    }
+    
+    .o-trailer {
+
+        .o-article {
+            
+            p {
+                color: $c-gray-08;
+            }
+        }
+    }
+    
+    .main-carousel {
+        margin-bottom: 50px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	margin-bottom: tablet_portrait(50);
+        }        
+    }
+    
+    
 }

@@ -34,7 +34,7 @@
         @media ( max-width: $tablet_portrait + px ) {
         	
         	.carousel-cell {
-            	width: grid(620, 768);
+            	width: grid(620, $tablet_portrait);
             	margin: 0 tablet_portrait(18);
             	transition: opacity .3s ease-out;
                 opacity: .5;
@@ -55,6 +55,38 @@
 
 .flickity-page-dots {
     cursor: pointer;
+    
+    @extend %flex;
+    display: none !important;
+    
+    @media ( max-width: $tablet_portrait + 1px ) {
+    	display: flex !important;
+    	justify-content: center;
+    	margin-top: 30px;
+    	margin-bottom: tablet_portrait(40);
+    }
+        
+    .dot {
+        width: 10px; height: 10px;
+        border: 1px solid $c-black-02;
+        border-radius: 50%;
+        
+        &:not(:first-of-type) {
+            margin-left: 10px;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                margin-left: tablet_portrait(20);
+            }
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            width: tablet_portrait(16); height: tablet_portrait(16);
+        }
+        
+        &.is-selected {
+            background-color: $c-black-02;
+        }
+    }
 }
 
 .flickity-enabled {
@@ -91,36 +123,6 @@
   height: 100% !important;
 }
 
-
-
-.flickity-page-dots {
-    @extend %flex;
-    display: none !important;
-    
-    @media ( max-width: $tablet_portrait + 1px ) {
-    	display: flex !important;
-    	justify-content: center;
-    	margin-top: 30px;
-    }
-        
-    .dot {
-        width: 10px; height: 10px;
-        border: 1px solid $c-black-02;
-        border-radius: 50%;
-        
-        &:not(:first-of-type) {
-            margin-left: 10px;
-        }
-        
-        @media ( max-width: $tablet_portrait + px ) {
-            width: tablet_portrait(20); height: tablet_portrait(20);
-        }
-        
-        &.is-selected {
-            background-color: $c-black-02;
-        }
-    }
-}
 
 
 .o-controls {

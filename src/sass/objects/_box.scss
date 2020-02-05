@@ -35,29 +35,6 @@
         }
     }   
     
-    .more-reviews {
-        //padding-top: 90px;
-        font: {
-            size: rem(18);
-            weight: $medium;
-        }
-        
-        @media ( max-width: $tablet_portrait + px ) {
-        	font-size: tablet_portrait(28);
-        }
-        
-        a {
-            &:after {
-                margin-left: 5px;
-                font: {
-                    family: $rebelia;
-                    size: rem(12);
-                }
-                content: "\e903";
-            }
-        }
-    }
-    
     .review {
         line-height: 34px;
         font-size: rem(18);

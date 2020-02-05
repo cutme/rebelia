@@ -17,4 +17,12 @@
    &--toppadding {
        padding-top: 80px;
    }
+   
+   @media ( max-width: $tablet_portrait + px ) {
+        margin: 0 auto;
+        padding: {
+            left: grid(40, $tablet_portrait); // 50px - container
+            right: grid(40, $tablet_portrait);
+        }
+    }
 }

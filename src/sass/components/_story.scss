@@ -19,6 +19,25 @@
         max-width: 860px;
     }
     
+    .o-section {
+
+        @media ( max-width: $tablet_portrait + px ) {
+        	padding: {
+            	top: tablet_portrait(120);
+        	    bottom: tablet_portrait(80);
+            	left: tablet_portrait(50);
+            	right: tablet_portrait(50);
+        	}
+        }
+    }
+    
+    .o-wrap {
+        @media ( max-width: $tablet_portrait + px ) {
+        	max-width: 100%;
+        	padding: 0;
+        }
+    }
+    
     .big {
         margin-bottom: 60px;
         
@@ -31,7 +50,7 @@
         }
 
         p {
-            line-height: 76px;
+            letter-spacing: -1px;
             line-height: 1.25em;
             font: {
                 size: rem(62);
@@ -51,7 +70,7 @@
     .normal {
         
         p {
-            line-height: 1.45em;
+            line-height: 1.7em;
             font: {
                 size: rem(24);
                 weight: $medium;

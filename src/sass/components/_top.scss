@@ -12,7 +12,7 @@
 	
 	@media ( max-width: $tablet_portrait + px ) {
 		height: tablet_portrait(150);        
-        padding: tablet_portrait(20) tablet_portrait(20) 0 tablet_portrait(20);
+        //padding: tablet_portrait(20) tablet_portrait(20) 0 tablet_portrait(20);
 	}
 	
 	&__bar {
@@ -24,6 +24,7 @@
     	border-radius: 6px;
     	
     	@media ( max-width: $tablet_portrait + px ) {
+        	margin-top: 20px;
         	height: tablet_portrait(88);
         }
 	} 
@@ -45,6 +46,11 @@
     	@media ( min-width: $tablet_portrait + 1px ) {
         	margin-top: -17px;
     	}
+    	
+    	@media ( max-width: $tablet_portrait + px ) {
+        	position: absolute; top: -20px;
+//    		margin-top: 0;
+    	}
 	}
 	
 	.o-wrap {
@@ -52,8 +58,12 @@
         @extend %flex-y;
     	height: 100%;
     	
+    	@media ( max-width: $tablet_portrait + px ) {
+            padding: 0 grid(28, $tablet_portrait - 44);
+    	}
+    	
     	@media ( max-width: $base--narrow + 100px ) {
-    		max-width: 100%;
+    		//max-width: 100%;
     		//padding: 0;
     	}
 	}

@@ -24,10 +24,18 @@ html:not(.ie) {
             
             &--left {
                 transform: translate3d(-50px, 0, 0);
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	transform: translate3d(0, 50px, 0);
+                }
             }
             
             &--right {
                 transform: translate3d(50px, 0, 0);
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	transform: translate3d(0, 50px, 0);
+                }
             }
             
             &--up {

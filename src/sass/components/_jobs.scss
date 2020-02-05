@@ -51,9 +51,15 @@
             color: $c-blue-06;
             
             @media ( max-width: $tablet_portrait + px ) {
-                right: tablet_portrait(30);
+                right: tablet_portrait(25);
                 font-size: tablet_portrait(30);
             }
+        }
+    }
+    
+    .o-wrap {
+        @media ( max-width: $tablet_portrait + px ) {
+        	padding: 0;
         }
     }
 

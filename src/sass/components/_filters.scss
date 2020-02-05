@@ -109,6 +109,10 @@
                 top: 4px;
                 left: 0;
                 content: '·';
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    top: tablet_portrait(12);
+                }
             }
             
             .c-hometrailers & {

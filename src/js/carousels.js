@@ -171,6 +171,7 @@ document.addEventListener('DOMContentLoaded',function() {
         });
 
 
+        disablePointerEvents(news, newsflkty);
         controls(news, newsflkty);
     };
     

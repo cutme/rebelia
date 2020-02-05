@@ -6,6 +6,10 @@
         
         &--margin {
             margin-bottom: 75px;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	margin-bottom: tablet_portrait(75);
+            }
         }
         
         @media ( max-width: $tablet_portrait + px ) {
@@ -37,20 +41,37 @@
         @extend %flex-column;
         @extend %flex-spacebetween;    
         height: 100%;
-        min-height: 460px;
         overflow: visible;
         letter-spacing: -.5px;
         padding: 0 30px 35px 30px;
         
+        @media ( min-width: $tablet_portrait + 1px ) {
+        	min-height: 460px;
+        }
+        
         .content {
             
             .review {
-                line-height: 34px;
                 line-height: 1.9em;
                 font-size: rem(18);
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    letter-spacing: normal;
+                    line-height: tablet_portrait(48);
+                	font-size: tablet_portrait(32);
+                }
             }
         }
-    }    
+    }
+    
+    .o-section {
+        @media ( max-width: $tablet_portrait + px ) {
+            padding: {
+                left: 0;
+                right: 0;
+            }
+        }
+    }
     
     .o-wrap {
         overflow: hidden;
@@ -61,7 +82,42 @@
         }
     }
     
+    .flickity-page-dots {
+        @media ( max-width: $tablet_portrait + px ) {
+        	margin-top: -10px !important;
+        	margin-bottom: 0;
+        }
+    }
+
     .flickity-viewport {
         overflow: visible;
+    }
+    
+    .more-reviews {
+        font: {
+            size: rem(18);
+            weight: $medium;
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            padding-top: tablet_portrait(100);
+            letter-spacing: normal;
+        	font-size: tablet_portrait(28);
+        }
+        
+        a {
+            &:after {
+                margin-left: 5px;
+                font: {
+                    family: $rebelia;
+                    size: rem(12);
+                }
+                content: "\e903";
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                     font-size: tablet_portrait(20);
+                }
+            }
+        }
     }
 }

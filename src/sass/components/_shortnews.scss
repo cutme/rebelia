@@ -24,8 +24,12 @@
         @extend %flex-column;
         @extend %flex-spacebetween; 
         height: 100%;
-        min-height: 460px;
+        
         font-weight: $semibold;
+        
+        @media ( min-width: tablet_portrait + px ) {
+        	min-height: 460px;
+        }
     } 
     
     .o-cols {
@@ -43,6 +47,20 @@
         
         @media ( min-width: $tablet_portrait + 1px ) {
             height: 210px;
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	height: tablet_portrait(304);
+        	//height: 314px;
+        }
+    }
+    
+    .o-section {
+        @media ( max-width: $tablet_portrait + px ) {
+            padding: {
+                left: 0;
+                right: 0;
+            }
         }
     }
     

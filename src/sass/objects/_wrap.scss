@@ -1,11 +1,21 @@
 .o-wrap {
     @extend %rel;
-	max-width: $base + 80px;
+	//max-width: $base + 100px;
+	max-width: $base;
 	margin: 0 auto;	
+	
+	&.padding {
+    	padding: {
+        	left: 50px;
+        	right: 50px;
+    	}
+	}
+/*
 	padding: {
     	left: 50px;
     	right: 50px;
-	}	
+	}
+*/	
 
     &:not(.o-wrap--narrow) {
         &:not(.o-wrap--narrow2) {
@@ -32,14 +42,26 @@
     
     
     &--narrow {
-    	width: $base--narrow + 100px;    	
+    	width: $base--narrow + 100px;
+    	padding: {
+        	left: 50px;
+        	right: 50px;
+    	}
     	
     	@media ( max-width: $base--narrow + 100px ) {
     		width: 100%;
     	}
     	
     	@media ( max-width: $base--narrow + 100px ) {
-    		max-width: 690px;
+    		//max-width: 690px;
+    	}
+    	
+    	@media ( max-width: $tablet_portrait + px ) {
+    		width: 100%;
+    		padding: {
+        		left: grid(50, $tablet_portrait);
+        		right: grid(50, $tablet_portrait);
+    		}
     	}
     }
 	

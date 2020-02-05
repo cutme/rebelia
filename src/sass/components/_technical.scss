@@ -2,6 +2,10 @@
 
     .o-article {
         letter-spacing: -1px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	letter-spacing: normal;
+        }
     }
 
     .o-box {
@@ -9,6 +13,15 @@
         
         @media ( max-width: $tablet_portrait + px ) {
             padding: tablet_portrait(20) tablet_portrait(50);
+        }
+    }
+    
+    .o-section {
+        @media ( max-width: $tablet_portrait + px ) {
+            padding: {
+                left: tablet_portrait(40);
+                right: tablet_portrait(40);
+            }
         }
     }
 
@@ -39,8 +52,8 @@
                 color: $c-blue-05;
                 
                 @media ( max-width: $tablet_portrait + px ) {
-                	font-size: tablet_portrait(30);
-                	padding: tablet_portrait(20) 0 0 0;
+                	font-size: tablet_portrait(36);
+                	padding: tablet_portrait(40) 0 0 0;
                 }
             }
             
