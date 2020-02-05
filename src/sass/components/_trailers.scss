@@ -12,7 +12,12 @@
         .o-trailer {
             &__video {
                 &:after {
-                    width: tablet_portrait(120); height: tablet_portrait(84);
+                    width: 120px; height: 84px;
+                    
+                    @media ( max-width: $tablet_portrait + px ) {
+                    	width: tablet_portrait(120); height: tablet_portrait(84);
+                    }
+                    
                 }
             }
         }

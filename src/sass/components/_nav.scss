@@ -41,6 +41,10 @@
                         color: black;
                     }
                 }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    font-size: tablet_portrait(44);                	
+                }
             }          
         }
     }
@@ -85,9 +89,7 @@
                 line-height: tablet_portrait(90);
 //                line-height: 4.5em;
                 
-                & > a {
-                    font-size: tablet_portrait(44);
-                }           
+                          
 
 /*
                 &:nth-child(1) {
