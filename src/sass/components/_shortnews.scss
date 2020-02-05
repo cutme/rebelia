@@ -36,6 +36,10 @@
         &__item {
             margin-bottom: 10px;
         }
+        
+        @media ( max-width: $tablet + px ) {
+        	display: flex;
+        }
     }
 
     .o-photo {
