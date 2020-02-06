@@ -67,6 +67,7 @@ module.exports = {
     		loaders.scss,
             loaders.fonts,
             loaders.images,
+            loaders.mp4,
             loaders.js,
             loaders.ejs
 		]

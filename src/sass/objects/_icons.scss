@@ -12,7 +12,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-play2:before {
+  content: "\e917";
+}
 .icon-arrow-circle-left:before {
   content: "\e900";
 }

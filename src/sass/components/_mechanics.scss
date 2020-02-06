@@ -1,9 +1,167 @@
 .c-mechanics {
-
-
-    .carousel-cell {
-        width: 66%;
-        margin-right: 10px;
-        border-radius: 12px;
+    overflow: hidden;
+    
+    &__info {
+        @extend %rel;
+        margin-top: 50px;
+        
+        @media ( min-width: $tablet_portrait + 1px ) {
+        	margin-top: -30px;
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	margin-top: tablet_portrait(60);
+        }
+        
+        .o-article {            
+            h2 {
+                margin-top: 0;
+            }
+        }
+        
+        .o-wrap {
+            @media ( max-width: $tablet_portrait + px ) {
+            	width: grid(620, $tablet_portrait - 50) !important;
+            	margin: 0 !important;
+            	max-width: 100%;
+            }
+        }
+        
+        .main-carousel {
+            .carousel-cell {
+                @extend %anim;
+                width: 100%;
+                opacity: 0;
+               // transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+                
+                &.is-selected {
+                    opacity: 1;
+                }
+            }
+        }
     }
+    
+    &__videos {
+        @extend %rel;
+        z-index: 10;
+        
+        .flickity-viewport {
+            overflow: visible;
+        }
+        
+        .main-carousel {
+            .carousel-cell {
+                transition: opacity .3s ease-out;
+                opacity: .5;
+                
+                @media ( min-width: $base + px ) {
+                    width: 1334px;
+                }
+                
+                @media ( min-width: 1341px ) and ( max-width: $base + px ) {
+                	width: grid(1334);
+                }
+                
+                @media ( min-width: $tablet_portrait + 1px ) and ( max-width: 1340px ) {
+                    width: 100%;
+                	//width: calc(100% - 420px);
+                }
+                
+                &.is-selected {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .o-trailer {
+        margin: 0 auto;
+        
+        @media ( min-width: $base + px ) {
+            width: 1104px;
+        }
+
+        @media ( min-width: 1401px ) and ( max-width: $base + px ) {
+            width: grid(1104, 1334);
+            min-width: 820px;
+        }
+        
+        @media ( min-width: 921px ) and ( max-width: 1400px ) {
+        	width: 820px;
+        }
+        
+        @media ( min-width: $tablet_portrait + 1px ) and ( max-width: 920px ) {
+        	width: grid(820, 920);
+        }
+        
+        &__video {
+            border-radius: 16px;
+            
+            img {
+                border-radius: 16px;
+            }
+        }
+        
+        &__video {
+            
+            
+            //@media ( min-width: $tablet_portrait + 1px ) and ( max-width: $tablet + px ) {
+            	
+           // }
+
+/*
+            &:after {
+                width: 120px; height: 84px;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	width: tablet_portrait(120); height: tablet_portrait(84);
+                }
+                
+            }
+*/
+            
+/*
+            &--big {
+                @media ( max-width: $tablet_portrait + px ) {
+                	max-width: 100%;
+                }
+            }
+*/
+            
+            &--shadow {
+                box-shadow: 0 26px 51px rgba(#818B9D, .51),
+                            0 0 28px #586986;
+       
+                @media ( max-width: $tablet_portrait + px ) {
+                	box-shadow: 0 14px 30px rgba(#818B9D, .51);
+                }
+            }
+        }
+    }
+    
+    .o-section {
+        @media ( max-width: $tablet + px ) {
+        	padding: {
+            	left: 0;
+            	right: 0;
+        	}
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            padding: {
+                left: tablet_portrait(50);
+                right: 0;
+            }
+        }
+    }
+    
+    
+    .o-wrap {
+            max-width: 820px;
+            
+            @media ( max-width: 920px ) {
+            	width: grid(820, 920);
+            }
+        }
+    
 }

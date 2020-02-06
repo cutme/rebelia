@@ -57,10 +57,10 @@ textarea {
 }
 
 
-::-webkit-input-placeholder { color: rgba($c-black-02, .8); }
-:-moz-placeholder { color: rgba($c-black-02, .8); }
-::-moz-placeholder { color: rgba($c-black-02, .8); }
-:-ms-input-placeholder { color: rgba($c-black-02, .8); }
+::-webkit-input-placeholder { color: rgba($c-black-02, .5); }
+:-moz-placeholder { color: rgba($c-black-02, .5); }
+::-moz-placeholder { color: rgba($c-black-02, .5); }
+:-ms-input-placeholder { color: rgba($c-black-02, .5); }
 
 
 input[type=text],
@@ -101,10 +101,10 @@ input[type=tel] {
 }
 
 textarea {
-    line-height: 1.85em;
+    line-height: 1.9em;
     padding: {
-        top: 15px;
-        bottom: 15px;
+        top: 10px;
+        bottom: 10px;
     }
     height: 150px;
 }

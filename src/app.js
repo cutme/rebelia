@@ -65,8 +65,7 @@ require('./img/photos/placeholders/final-trailer@2x.jpg');
 require('./img/photos/placeholders/mechanics-01.jpg');
 require('./img/photos/placeholders/mechanics-01@2x.jpg');
 
-
-
 require('./img/photos/placeholders/trailer.jpg');
 require('./img/photos/placeholders/trailer@2x.jpg');
 
+require('./img/video.mp4');

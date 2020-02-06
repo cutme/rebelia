@@ -39,6 +39,7 @@
     &--big {
 
         p {
+            letter-spacing: -1px;
             line-height: 1.75em;
             font-size: rem(26);
             color: $c-blue-04;

@@ -19,16 +19,8 @@
           
         &:after {
             @extend %abs-pseudo;
-            @extend %abs-xy;
             @extend %anim;
-            transform-origin: left center;
         }        
-        
-        &:hover {
-            &:after {
-                transform: scale3d(1.1, 1.1, 1.1) translate3d(-50%, -50%, 0);
-            }
-        }
         
         &--big {
             width: 820px;
@@ -39,8 +31,36 @@
             }
         }
         
-        &--mechanics {
+       /*
+ &--mechanics {
             width: 1104px;
+        }
+*/
+        
+        &--mp4 {
+            &:after {
+                left: 0; top: 0;
+                width: 100%; height: 100%;
+                background: {
+                    image: url(../img/icons/play2.svg);
+                    size: 100px auto;
+                    repeat: no-repeat;
+                    position: center;
+                }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	background-size: 70px auto;
+                }
+            }
+            
+            &:hover {
+                .desktop & {
+                    &:after {
+                        transform: scale3d(1.1, 1.1, 1.1);
+                        //translate3d(-50%, -50%, 0);
+                    }
+                }
+            }
         }
 
         &--small {
@@ -54,6 +74,8 @@
         
         &--youtube {
             &:after {
+                @extend %abs-xy;
+                transform-origin: left center;
                 width: 90px; height: 63px;
                 background: {
                     image: url(../img/icons/youtube.svg);
@@ -62,6 +84,14 @@
                 
                 @media ( max-width: $tablet_portrait + px ) {
                 	width: tablet_portrait(120); height: tablet_portrait(85);
+                }
+            }
+            
+            &:hover {
+                .desktop & {
+                    &:after {
+                        transform: scale3d(1.1, 1.1, 1.1) translate3d(-50%, -50%, 0);
+                    }
                 }
             }
         }

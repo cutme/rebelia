@@ -142,18 +142,27 @@
                 th {
                     @media ( min-width: $tablet_portrait + 1px ) {
                     	vertical-align: top;
-                        padding-top: 25px;
+                        padding-top: 20px;
                     }
                 }
             }
             
             &:last-of-type {
                 td {
-                    padding: tablet_portrait(20) 0 0 0;
+                    padding-top: 0;
+
+                    @media ( max-width: $tablet_portrait + px ) {
+                        padding: tablet_portrait(20) 0 0 0;
+                    }
                 }
                 
                 th {
-                    display: none;
+                    padding-top: 0;
+                    
+                    @media ( max-width: $tablet_portrait + px ) {
+                    	display: none;
+                    }
+                    
                 }
             }
         }

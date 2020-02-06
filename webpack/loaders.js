@@ -75,6 +75,20 @@ const fonts = {
 	]
 }
 
+const mp4 = {
+	test: /\.mp4$/,
+	use: [
+	    {
+		    loader: 'file-loader',
+			options: {
+			    name: '[name].[ext]',
+			    useRelativePath: true
+			}
+        }
+	]
+}
+
+
 const images = {
     test: /\.(jpg|png|svg|gif)$/i,
     exclude: /fonts/,
@@ -111,6 +125,7 @@ module.exports = {
     ejs: ejs,
     fonts: fonts,
     images: images,
+    mp4: mp4,
     js: js,
     css: css,
     scss: scss

@@ -141,15 +141,38 @@ document.addEventListener('DOMContentLoaded',function() {
     
     window.mechanicsCarousel = function() {
         
-        const mechanics = document.getElementById('mechanics');
+        const mechanics = document.getElementById('mechanics'),
+              info = document.getElementById('mechanicsInfo');
 
         const mechanicsflkty = new Flickity( mechanics, {
-            wrapAround: true,
-            prevNextButtons: false,
-            pageDots: false
+            percentPosition: false,
+            watchCSS: {
+                desktop: {
+                    wrapAround: true
+                },
+                mobile: {
+                    cellAlign: 'left',
+                    freeScroll: true
+                }
+            }
         });
+        
+        const mechanicsInfoflkty = new Flickity( info, {
+            draggable: false,
+            prevNextButtons: false,
+            pageDots: false,
+        });
+        
+        mechanicsflkty.on( 'change', function( index ) {
+            mechanicsInfoflkty.select( index )
+        });
+        
+        
+        
+        
 
-        //controls(mechanicsflkty);
+        disablePointerEvents(mechanics, mechanicsflkty);
+        controls(mechanics, mechanicsflkty);
     };
 
     window.newsCarousel = function() {
@@ -207,9 +230,7 @@ document.addEventListener('DOMContentLoaded',function() {
 
         controls(reviews, reviewsflkty);
     };
-    
 
-    
     window.watchtrailersCarousel = function() {
         
         const watchtrailers = document.getElementById('watchtrailers');
