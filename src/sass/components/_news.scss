@@ -115,6 +115,10 @@
         }
         color: $c-blue-05;
         
+        a {
+            color: $c-blue-05 !important;
+        }
+        
         @media ( max-width: $tablet_portrait + px ) {
             margin-bottom: tablet_portrait(50);
             padding: 0 tablet_portrait(50);
@@ -122,8 +126,4 @@
         	font-size: tablet_portrait(40);
         }
     }    
-    
-    
-
-     
 }

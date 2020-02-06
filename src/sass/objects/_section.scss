@@ -16,10 +16,22 @@
    
    &--toppadding {
        padding-top: 80px;
+       
+       @media ( max-width: $tablet_portrait + px ) {
+        	padding-top: tablet_portrait(80);
+        }
    }
    
-   @media ( max-width: $tablet_portrait + px ) {
+    @media ( max-width: $tablet + px ) {
         margin: 0 auto;
+        padding: {
+            left: 40px;
+            right: 40px;
+        }
+    }
+   
+   @media ( max-width: $tablet_portrait + px ) {
+//        margin: 0 auto;
         padding: {
             left: grid(40, $tablet_portrait); // 50px - container
             right: grid(40, $tablet_portrait);

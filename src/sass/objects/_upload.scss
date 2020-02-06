@@ -3,6 +3,10 @@
     @extend %flex-inline;
 	overflow: hidden;
 	cursor: pointer;
+	
+	@media ( max-width: $tablet_portrait + px ) {
+		width: 100%;
+	}
     
     input[type='file'] {
 		@extend %abs;
@@ -24,8 +28,22 @@
         border-radius: 6px;
         padding: 0 20px 0 10px;
         
+        @media ( max-width: $tablet_portrait + px ) {
+            width: 100%;
+            height: tablet_portrait(80);
+        	border-radius: tablet_portrait(12);
+        	padding: tablet_portrait(15) tablet_portrait(20);
+        	font-size: tablet_portrait(28);
+        }
+        
         img {
             margin-right: 10px;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                width: auto;
+                height: 100%;
+            	//width: 43px;
+            }
         }
         
         span {

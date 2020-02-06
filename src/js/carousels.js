@@ -165,6 +165,7 @@ document.addEventListener('DOMContentLoaded',function() {
                     groupCells: 2,
                 },
                 mobile: {
+                    cellAlign: 'left',
                     freeScroll: true
                 }
             }
@@ -218,6 +219,8 @@ document.addEventListener('DOMContentLoaded',function() {
                 desktop: {
                     cellAlign: 'left',
                     contain: true,
+                    groupCells: true,
+                    groupCells: 1,
                 },
                 mobile: {
                     freeScroll: true

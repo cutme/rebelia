@@ -3,8 +3,7 @@
     &__latest {
         
         @media ( max-width: $tablet_portrait + px ) {
-        	width: grid(650, 748);
-        	margin: 0 auto 70px auto;
+        	margin: 0 auto tablet_portrait(20);
         }
 
         .title {
@@ -29,6 +28,30 @@
                 &:first-of-type {
                     border-top: 1px solid $c-gray-03;
                 }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	display: flex;
+                	flex-wrap: wrap;
+                }
+            }
+            
+            td {
+                letter-spacing: -1px;
+                font-size: rem(18);
+
+                @media ( max-width: $tablet_portrait + px ) {
+                     padding-top: 0;
+                }
+            }
+            
+            th {
+                font-size: rem(16);
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    padding-bottom: 0;
+                    padding-top: 20px;
+                    order: 2;
+                }
             }
 
             th {
@@ -50,27 +73,27 @@
                 font-weight: $medium;
                 
                 @media ( max-width: $tablet_portrait + px ) {
-                    line-height: 44px;
                     line-height: 1.6em;
-                	font-size: tablet_portrait(28);
+                	font: {
+                    	size: tablet_portrait(28);
+                        weight: $regular;
+                    }
                 }
             }
             
             td {
-                letter-spacing: -1px;
-                font-size: rem(18);
-
                 @media ( max-width: $tablet_portrait + px ) {
-                     padding-top: 0;
+                    padding-bottom: 0;
+                    padding-top: tablet_portrait(20);
+                    
                 }
             }
             
             th {
-                font-size: rem(16);
-                
                 @media ( max-width: $tablet_portrait + px ) {
-                    padding-bottom: 0;
-                    padding-top: 20px;
+                    width: 100%;
+                    padding-top: 0;
+                    padding-bottom: tablet_portrait(20);
                 }
             }
         }
@@ -80,15 +103,34 @@
         @extend %flex;
         @extend %flex-spacebetween;
         margin-top: 20px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	margin-top: tablet_portrait(30);
+        }
                 
         a {
             letter-spacing: -1px;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	font: {
+                	size: tablet_portrait(32);
+                	weight: $medium;
+                }
+            }
 
+            &:after,
             &:before {
                 font: {
                     family: $rebelia;
                     weight: $semibold;
                     size: rem(12);
+                }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	font: {
+                    	size: tablet_portrait(22);
+                    	weight: $medium;
+                    }
                 }
             }
             color: $c-blue-01;
@@ -110,6 +152,13 @@
                 &:before {
                     margin-right: 10px;
                     content: "\e902";
+                }
+            }
+            
+            &.next {
+                &:after {
+                    margin-left: 10px;
+                    content: "\e903";
                 }
             }
         }

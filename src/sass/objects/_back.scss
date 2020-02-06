@@ -9,6 +9,12 @@
     }
     color: $c-blue-01;
     
+    @media ( max-width: $tablet_portrait + px ) {
+        left: tablet_portrait(28);
+        bottom: tablet_portrait(-110);
+    	font-size: tablet_portrait(28);
+    }
+    
     .back-visible & {
         display: block;
     }
@@ -20,6 +26,10 @@
             size: rem(12);
         }
         content: "\e902";
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            font-size: tablet_portrait(18);
+        }
     }
     
     &:hover {

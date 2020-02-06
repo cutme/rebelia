@@ -5,7 +5,7 @@
     &--carousel {
         .o-more {
             padding-top: 10px;
-        }
+        }        
     }
     
     &--static {
@@ -14,8 +14,20 @@
             font-weight: $extrabold;
         }
         
+        .o-more {
+            @media ( max-width: $tablet_portrait + px ) {
+            	padding-top: tablet_portrait(10);
+            }
+        }
+        
         .o-section {
             padding-top: 40px;
+        }
+    }
+    
+    .o-article--big {
+        @media ( max-width: $tablet_portrait + px ) {
+            padding-right: tablet_portrait(50);            
         }
     }
     
@@ -62,7 +74,7 @@
     .o-section {
         @media ( max-width: $tablet_portrait + px ) {
             padding: {
-                left: 0;
+                left: tablet_portrait(50);
                 right: 0;
             }
         }
@@ -87,6 +99,10 @@
         .caption {
             padding: 25px 30px;
             letter-spacing: -.5px;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	padding: tablet_portrait(35) tablet_portrait(50);
+            }
         }
     }
     
@@ -94,11 +110,10 @@
         opacity: .5;
         padding: 30px;
         font-size: rem(16);
-        
         color: $c-blue-04;
         
         @media ( max-width: $tablet_portrait + px ) {
-            padding-top: tablet_portrait(90);
+            padding: tablet_portrait(30) tablet_portrait(50);
         	font-size: tablet_portrait(28);
         }
     }     

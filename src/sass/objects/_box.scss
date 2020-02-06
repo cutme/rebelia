@@ -8,19 +8,21 @@
     	border-radius: tablet_portrait(24);
     }
     
-    a {
-        color: $c-blue-01;
-
-        &:hover {
-            .desktop & {
-                color: $c-blue-02;
+     a {
+        &:not(.o-btn) {
+            color: $c-blue-01;
+    
+            &:hover {
+                .desktop & {
+                    color: $c-blue-02;
+                }
+            }
+            
+            &:visited {
+                color: $c-blue-03;
             }
         }
-        
-        &:visited {
-            color: $c-blue-03;
-        }
-    }    
+    }  
     
     .category {
         margin-bottom: 4px;

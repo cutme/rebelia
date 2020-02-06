@@ -27,6 +27,10 @@
             	margin: 0 20px;
             }
             
+            @media ( max-width: $tablet_portrait + px ) {
+            	line-height: tablet_portrait(90);
+            }
+            
             &.current-menu-item {
                 a {
                     border-bottom: 1px solid $c-black-01;
@@ -86,7 +90,7 @@
                 //opacity: 0;
                 //transform: translate3d(0, 10px, 0);
                 //transition: all 300ms ease;
-                line-height: tablet_portrait(90);
+                
 //                line-height: 4.5em;
                 
                           

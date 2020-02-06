@@ -25,12 +25,14 @@
         }
     }
 	
+/*
 	@media ( max-width: $tablet + px ) {
         padding: {
         	left: 20px;
         	right: 20px;
     	}
     }
+*/
     
     @media ( max-width: $smartphone_portrait + px ) {
         padding: {
@@ -70,7 +72,7 @@
     	
     	@media ( max-width: $tablet_portrait + px ) {
 		    max-width: 690px;
-            padding: 20px;
+            //padding: 20px;
     	}
     	
     	@media ( max-width: 690px ) {

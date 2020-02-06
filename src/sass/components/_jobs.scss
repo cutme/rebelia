@@ -1,11 +1,15 @@
 .c-jobs {
 
     &__list {
-        li:not(:last-child) {
-            margin-bottom: 40px;
-            
-            @media ( max-width: $tablet_portrait + px ) {
-            	margin-bottom: tablet_portrait(40);
+        padding-top: 40px;
+
+        ul {
+            li:not(:last-child) {
+                margin-bottom: 40px;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	margin-bottom: tablet_portrait(40);
+                }
             }
         }
     }
@@ -70,5 +74,15 @@
     
     .time {
         color: $c-black-02;
+    }
+    
+    .title {
+        @extend %lead--2;
+        margin-bottom: .45em;
+        font-weight: $extrabold;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	font-size: tablet_portrait(44);
+        }
     }
 }

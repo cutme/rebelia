@@ -61,10 +61,5 @@
     	@media ( max-width: $tablet_portrait + px ) {
             padding: 0 grid(28, $tablet_portrait - 44);
     	}
-    	
-    	@media ( max-width: $base--narrow + 100px ) {
-    		//max-width: 100%;
-    		//padding: 0;
-    	}
 	}
 }

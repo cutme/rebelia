@@ -5,12 +5,16 @@
     margin: 0 auto 70px auto;
     
     @media ( max-width: $tablet_portrait + px ) {
-    	width: grid(650, 748);
-    	margin: 0 auto 70px auto;
+        margin-bottom: tablet_portrait(80);
     }
     
     .o-box {
         padding: 30px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            border-width: 2px;
+        	padding: tablet_portrait(50);
+        }
     }
     
     .title,
@@ -34,7 +38,7 @@
         margin-bottom: 50px;
         
         @media ( max-width: $tablet_portrait + px ) {
-            margin-bottom: tablet_portrait(60);
+            margin-bottom: tablet_portrait(80);
         }
 
         p {
@@ -87,7 +91,7 @@
             
             &:not(:last-of-type) {
                 @media ( max-width: $tablet_portrait + px ) {
-                    margin-bottom: 40px;
+                    margin-bottom: tablet_portrait(50);
                 }
             }
         }
@@ -95,6 +99,10 @@
     
     .o-header {
         margin-bottom: 30px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	margin-bottom: tablet_portrait(50);
+        }
     }
     
     
