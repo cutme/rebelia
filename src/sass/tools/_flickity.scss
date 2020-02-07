@@ -9,7 +9,9 @@
             
             @media ( min-width: $tablet_portrait + 1px ) {
                 width: grid(386, 820);
+                margin-right: grid(48, 820);
                 
+/*
                 &:nth-of-type(even) {
                     margin-left: grid(24, 820);
                 }
@@ -17,6 +19,7 @@
                 &:nth-of-type(odd) {
                     margin-right: grid(24, 820);
                 }
+*/
             }
         } 
     }

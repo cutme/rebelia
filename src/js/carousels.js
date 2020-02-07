@@ -6,20 +6,38 @@ const utils = require('fizzy-ui-utils');
 document.addEventListener('DOMContentLoaded',function() {
     
     const disablePointerEvents = function(container, flkty) {
+        
+        let pause; 
+        
         flkty.on('dragStart', function() {
-            let video = container.getElementsByClassName('js-video');
-            
-            for (let i = 0; i < video.length; i++) {
-                video[i].style.pointerEvents = 'none';
-            }            
+                     
         });
         
         flkty.on('dragEnd', function() {
-            let video = container.getElementsByClassName('js-video');
+            //let video = container.getElementsByClassName('js-video');
             
-            for (let i = 0; i < video.length; i++) {
-                video[i].style.pointerEvents = 'all';
-            }            
+            let cell = container.getElementsByClassName('js-video');
+            
+            for (let i = 0; i < cell.length; i++) {
+                cell[i].getElementsByTagName('a')[0].style.pointerEvents = 'none';
+            }
+            
+
+            setTimeout(function() {
+                
+                
+                for (let i = 0; i < video.length; i++) {
+                    cell[i].getElementsByTagName('a')[0].style.pointerEvents = 'all';
+                } 
+                
+/*
+                for (let i = 0; i < video.length; i++) {
+                    video[i].style.pointerEvents = 'all';
+                } 
+*/           
+
+            }, 1);
+
         });
     };
 
@@ -152,7 +170,8 @@ document.addEventListener('DOMContentLoaded',function() {
                 },
                 mobile: {
                     cellAlign: 'left',
-                    freeScroll: true
+                    freeScroll: true,
+                    freeScrollFriction: 0.03,
                 }
             }
         });
@@ -167,10 +186,6 @@ document.addEventListener('DOMContentLoaded',function() {
             mechanicsInfoflkty.select( index )
         });
         
-        
-        
-        
-
         disablePointerEvents(mechanics, mechanicsflkty);
         controls(mechanics, mechanicsflkty);
     };
@@ -189,7 +204,9 @@ document.addEventListener('DOMContentLoaded',function() {
                 },
                 mobile: {
                     cellAlign: 'left',
-                    freeScroll: true
+                    freeScroll: true,
+                    freeScrollFriction: 0.03,
+                    draggable: true
                 }
             }
         });
@@ -223,7 +240,8 @@ document.addEventListener('DOMContentLoaded',function() {
                     groupCells: 2,
                 },
                 mobile: {
-                    freeScroll: true
+                    freeScroll: true,
+                    freeScrollFriction: 0.03,
                 }
             }
         });
@@ -244,7 +262,8 @@ document.addEventListener('DOMContentLoaded',function() {
                     groupCells: 1,
                 },
                 mobile: {
-                    freeScroll: true
+                    freeScroll: true,
+                    freeScrollFriction: 0.03,
                 }
             }            
         });

@@ -129,12 +129,18 @@
 */
             
             &--shadow {
+                
+                box-shadow: 0 16px 51px rgba(#818B9D, .81);
+/*
                 box-shadow: 0 26px 51px rgba(#818B9D, .51),
                             0 0 28px #586986;
+*/
        
+
                 @media ( max-width: $tablet_portrait + px ) {
                 	box-shadow: 0 14px 30px rgba(#818B9D, .51);
                 }
+
             }
         }
     }

@@ -8,8 +8,11 @@
         margin: 0 auto;
         
         &--shadow {
+            box-shadow: 0 16px 51px rgba(#818B9D, .81);
+/*
             box-shadow: 0 38px 55px rgba(#9D9D9D, .51),
                         0 0 17px #888;
+*/
    
             @media ( max-width: $tablet_portrait + px ) {
                 box-shadow: 0 48px 70px rgba(#9D9D9D, .51),

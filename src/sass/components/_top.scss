@@ -2,7 +2,7 @@
     @include z-index(top);
     @extend %abs;
     left: 0; top: 0;
-    width: 100%; height: 96px;
+    width: 100%; height: 106px;
 	padding: 0 22px;
 	
 	@media ( min-width: $tablet_portrait + 1px ) {
@@ -43,13 +43,8 @@
 	}
 
 	.o-logo {
-    	@media ( min-width: $tablet_portrait + 1px ) {
-        	margin-top: -17px;
-    	}
-    	
     	@media ( max-width: $tablet_portrait + px ) {
         	position: absolute; top: -20px;
-//    		margin-top: 0;
     	}
 	}
 	

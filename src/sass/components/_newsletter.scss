@@ -2,6 +2,7 @@
     margin-bottom: 10px;
 
     input[type=email] {
+        margin: 0;
         border-radius: 6px 0 0 6px;
         
         @media ( max-width: $tablet_portrait + px ) {
@@ -29,7 +30,9 @@
     }
     
     .o-btn {
+        flex: 1;
         height: 57px;
+        margin: 0;
         border-radius: 0 6px 6px 0;
         
         @media ( max-width: $tablet_portrait + px ) {
