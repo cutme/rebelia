@@ -48,7 +48,7 @@
         @media ( max-width: $tablet_portrait + px ) {
         	height: tablet_portrait(184);
         	line-height: 1.5em;
-        	padding: 20px;
+        	padding: tablet_portrait(20) 20px;
         }
     }
     
@@ -138,13 +138,13 @@
                 vertical-align: middle;
                 
                 @media ( max-width: $tablet_portrait + px ) {
-                    padding: 0 16px 0 0;
+                    padding: 0 0 tablet_portrait(10) 0;
                 }
             }
             
             td {
                 @media ( max-width: $tablet_portrait + px ) {
-                	padding-bottom: tablet_portrait(30);
+                	padding: 0 0 tablet_portrait(30) 0;
                 }
             }
             
