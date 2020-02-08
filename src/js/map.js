@@ -43,11 +43,30 @@ const loadGoogleMapsApi = require('load-google-maps-api');
 			
 			map.panBy(200, 0);
 			
+			
+			
 			setTimeout(function() {
     			document.getElementsByClassName('js-mapinfo')[0].classList.add('is-visible');    			
 			}, 1000);
+			
+						
+			
+			var mapResized = false;
 
+            function resizeMap(map) {
+                google.maps.event.trigger(map, 'resize');
+                mapResized = true;
+            }
             
+            google.maps.event.addListener(map, 'bounds_changed', function() {
+                if (mapResized) {
+                    // react here
+                    console.log('a');
+                }
+                mapResized = false;
+                console.log('b');
+            });
+			
         
         }).catch(function (error) {
             console.error(error)

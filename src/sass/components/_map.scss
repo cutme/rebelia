@@ -17,14 +17,15 @@
     
     @media ( max-width: $tablet_portrait + px ) {
     	width: calc(100% + 20px);
-    	margin: tablet_portrait(80) -10px;
+    	margin: tablet_portrait(80) -10px 10px -10px;
     }
     
     &__area {
         height: 540px;
         
         @media ( max-width: $tablet_portrait + px ) {
-            height: 686px;
+            height: tablet_portrait(838);
+//            height: 686px;
         }
 
         &.is-loading {
@@ -43,6 +44,11 @@
         
         @media ( max-width: 860px ) {
         	width: 100%;
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	padding-top: tablet_portrait(120);
+        	padding-right: tablet_portrait(50);
         }
     }
     
@@ -97,6 +103,13 @@
             margin-bottom: .5em;
             font-weight: $bold;
             color: $c-pink-01;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	font: {
+                	size: tablet_portrait(28);
+                	weight: $semibold;
+                }
+            }
         }
         
         p {

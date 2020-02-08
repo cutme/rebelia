@@ -8,35 +8,24 @@ document.addEventListener('DOMContentLoaded',function() {
     const disablePointerEvents = function(container, flkty) {
         
         let pause; 
+        let cell = container.getElementsByClassName('carousel-cell');
         
-        flkty.on('dragStart', function() {
-                     
-        });
-        
-        flkty.on('dragEnd', function() {
-            //let video = container.getElementsByClassName('js-video');
-            
-            let cell = container.getElementsByClassName('js-video');
+        flkty.on('dragStart', function() {            
             
             for (let i = 0; i < cell.length; i++) {
                 cell[i].getElementsByTagName('a')[0].style.pointerEvents = 'none';
             }
-            
+        });
+        
+        flkty.on('dragEnd', function() {
 
             setTimeout(function() {
                 
-                
-                for (let i = 0; i < video.length; i++) {
+                for (let i = 0; i < cell.length; i++) {
                     cell[i].getElementsByTagName('a')[0].style.pointerEvents = 'all';
                 } 
-                
-/*
-                for (let i = 0; i < video.length; i++) {
-                    video[i].style.pointerEvents = 'all';
-                } 
-*/           
 
-            }, 1);
+            }, 100);
 
         });
     };
@@ -164,6 +153,7 @@ document.addEventListener('DOMContentLoaded',function() {
 
         const mechanicsflkty = new Flickity( mechanics, {
             percentPosition: false,
+            dragThreshold: 1,
             watchCSS: {
                 desktop: {
                     wrapAround: true
@@ -180,10 +170,11 @@ document.addEventListener('DOMContentLoaded',function() {
             draggable: false,
             prevNextButtons: false,
             pageDots: false,
+            fade: true
         });
         
         mechanicsflkty.on( 'change', function( index ) {
-            mechanicsInfoflkty.select( index )
+            mechanicsInfoflkty.select( index, true, true );
         });
         
         disablePointerEvents(mechanics, mechanicsflkty);
@@ -195,6 +186,7 @@ document.addEventListener('DOMContentLoaded',function() {
         const news = document.getElementById('news');
 
         const newsflkty = new Flickity( news, {
+            dragThreshold: 1,
             watchCSS: {
                 desktop: {
                     cellAlign: 'left',
@@ -221,6 +213,7 @@ document.addEventListener('DOMContentLoaded',function() {
         const played = document.getElementById('played');
 
         window.playedflkty = new Flickity( played, {
+            dragThreshold: 1,
             prevNextButtons: false,
             pageDots: false,
             draggable: false
@@ -232,6 +225,8 @@ document.addEventListener('DOMContentLoaded',function() {
         const reviews = document.getElementById('reviews');
 
         const reviewsflkty = new Flickity( reviews, {
+            adaptiveHeight: false,
+            dragThreshold: 1,
             watchCSS: {
                 desktop: {
                     cellAlign: 'left',
@@ -254,7 +249,8 @@ document.addEventListener('DOMContentLoaded',function() {
         const watchtrailers = document.getElementById('watchtrailers');
 
         const watchtrailersflkty = new Flickity( watchtrailers, {
-             watchCSS: {
+            dragThreshold: 1,
+            watchCSS: {
                 desktop: {
                     cellAlign: 'left',
                     contain: true,

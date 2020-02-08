@@ -116,8 +116,8 @@
             }
             
             .c-hometrailers & {
-                @media ( min-width: $tablet + 1px ) and ( max-width: $base--narrow + px ) {
-                    padding: 0 10px 2px 10px;
+                @media ( min-width: $tablet + 1px ) and ( max-width: 1320px ) {
+                    padding: 1px 18px 2px 18px;
                     font-size: rem(16);
                 }
             }

@@ -37,6 +37,7 @@
         
         @media ( max-width: $tablet_portrait + px ) {
         	height: tablet_portrait(80);
+        	border-width: 2px;
         	font-size: tablet_portrait(26);
         }        
     }
@@ -47,8 +48,14 @@
         @media ( max-width: $tablet_portrait + px ) {
         	height: tablet_portrait(184);
         	line-height: 1.5em;
+        	padding: 20px;
         }
     }
+    
+    ::-webkit-input-placeholder { color: $c-black-02; }
+    :-moz-placeholder { color: $c-black-02; }
+    ::-moz-placeholder { color: $c-black-02; }
+    :-ms-input-placeholder { color: $c-black-02; }
 
     &__content {
         @extend %anim;
@@ -96,14 +103,14 @@
     
     .title {
         @extend %lead--2;
-        margin-bottom: .6em;
+        margin-bottom: .8em;
         letter-spacing: -1px;
         font-weight: $extrabold;
         white-space: nowrap;
         color: $c-black-01;
         
         @media ( max-width: $tablet_portrait + px ) {
-            margin-bottom: 1em;
+            margin-bottom: .9em;
         	font-size: tablet_portrait(44);
         }
     }
@@ -116,7 +123,6 @@
                 padding: 10px 0;
                 
                 @media ( max-width: $tablet_portrait + px ) {
-                    padding: tablet_portrait(5) 0;
                 	font: {
                     	size: tablet_portrait(28);
                     	weight: $medium;
@@ -130,11 +136,15 @@
                 white-space: nowrap;
                 text-align: left;
                 vertical-align: middle;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    padding: 0 16px 0 0;
+                }
             }
             
             td {
                 @media ( max-width: $tablet_portrait + px ) {
-                	padding-bottom: tablet_portrait(20);
+                	padding-bottom: tablet_portrait(30);
                 }
             }
             
@@ -152,7 +162,7 @@
                     padding-top: 0;
 
                     @media ( max-width: $tablet_portrait + px ) {
-                        padding: tablet_portrait(20) 0 0 0;
+                        padding: tablet_portrait(10) 0 0 0;
                     }
                 }
                 

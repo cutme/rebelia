@@ -98,12 +98,35 @@
         }
     }
     
+    .o-section {
+        padding: {
+            left: 0;
+            right: 0;
+        }
+        @media ( max-width: $tablet_portrait + px ) {
+        	padding: {
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+    
     .o-trailer {
         .o-article {
             p {
                 line-height: 32px;
                 font-size: rem(24);
                 color: $c-blue-04;
+            }
+        }
+        
+        &__video {
+            @media ( max-width: $tablet_portrait + px ) {
+                max-width: 560px;
+            }
+            
+            @media ( max-width: 660px ) {
+                width: grid(560, 620);
             }
         }
     }

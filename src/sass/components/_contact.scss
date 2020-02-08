@@ -1,7 +1,15 @@
 .c-contact {
+    
+    .o-article {
+        padding: {
+            left: grid(40);
+            right: gird(40);
+        }
+    }
+    
     .o-section {
         
-        @media ( max-width: $tablet_portrait + px ) {
+        @media ( max-width: $tablet + px ) {
         	padding: {
                 left: 0;
                 right: 0;
