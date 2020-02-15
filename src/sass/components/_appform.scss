@@ -37,8 +37,9 @@
         
         @media ( max-width: $tablet_portrait + px ) {
         	height: tablet_portrait(80);
-        	border-width: 2px;
+        	//border-width: 2px;
         	font-size: tablet_portrait(26);
+        	padding: 0 tablet_portrait(20);
         }        
     }
     
@@ -48,7 +49,7 @@
         @media ( max-width: $tablet_portrait + px ) {
         	height: tablet_portrait(184);
         	line-height: 1.5em;
-        	padding: tablet_portrait(20) 20px;
+        	padding: tablet_portrait(20);
         }
     }
     
@@ -78,7 +79,12 @@
         
         @media ( max-width: $tablet_portrait + px ) {
         	border-radius: 30px;
+        	border-width: 3px;
         	padding: tablet_portrait(40) tablet_portrait(50) tablet_portrait(50) tablet_portrait(50);
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+        	border-width: 2px;
         }
         
         &.is-visible {

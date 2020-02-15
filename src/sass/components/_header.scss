@@ -116,6 +116,10 @@
                 weight: $extrabold;
             }
             
+            .junk & {
+                white-space: nowrap;
+            }
+            
             @media ( max-width: $base--narrow + 100px ) {
             	font-size: base-narrow(88);
             }
