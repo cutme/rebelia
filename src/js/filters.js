@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded',function() {
             
             setTimeout(function() {
                 reset();
-            }, 1);
+            }, 300);
             
         });
 

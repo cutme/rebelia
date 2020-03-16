@@ -42,6 +42,7 @@
     "dependencies": {
         "@glidejs/glide": "^3.4.1",
         "@pluginjs/scroll-progress": "^0.7.18",
+        "@vimeo/player": "^2.10.0",
         "autoprefixer": "^9.5.0",
         "cssnano": "^4.1.10",
         "detect-browser": "^4.6.0",

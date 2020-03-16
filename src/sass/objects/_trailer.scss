@@ -50,8 +50,11 @@
 */
         
         &--mp4 {
+            //pointer-events: none;
+            
             &:after {
-                left: 0; top: 0;
+                @extend %abs-xy; z-index: 999;
+                //left: 0; top: 0;
                 width: 100%; height: 100%;
                 background: {
                     image: url(../img/icons/play2.svg);
@@ -59,18 +62,32 @@
                     repeat: no-repeat;
                     position: center;
                 }
+                //display: none;
+                width: 107px; height: 141px;
+                transform-origin:  left;
+                transform: scale3d(1.1, 1.1, 1.1) translate3d(-50%, -50%);
+                pointer-events: none;
+                cursor: pointer;
                 
                 @media ( max-width: $tablet_portrait + px ) {
                 	background-size: tablet_portrait(70) auto;
                 }
             }
             
+           
+            
             &:hover {
                 .desktop & {
                     &:after {
-                        transform: scale3d(1.1, 1.1, 1.1);
-                        //translate3d(-50%, -50%, 0);
+
+                        transform: scale3d(1.1, 1.1, 1.1) translate3d(-50%, -50%, 0);
                     }
+                }
+            }
+            
+            &.play {
+                &:after {
+                    display: none;
                 }
             }
         }

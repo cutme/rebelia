@@ -16,6 +16,8 @@ const loadGoogleMapsApi = require('load-google-maps-api');
                   myLatLng = new google.maps.LatLng(lat, lng),
                   markerWidth = 52,
                   markerHeight = 79;
+
+            let spanned = false;
         
             const image = {
                 url: el.getAttribute('data-marker'),
@@ -41,16 +43,11 @@ const loadGoogleMapsApi = require('load-google-maps-api');
 				animation: google.maps.Animation.DROP,				
 			});
 			
-			map.panBy(200, 0);
-			
-			
-			
 			setTimeout(function() {
     			document.getElementsByClassName('js-mapinfo')[0].classList.add('is-visible');    			
-			}, 1000);
-			
-						
-			
+			}, 1000);	
+				
+/*
 			var mapResized = false;
 
             function resizeMap(map) {
@@ -66,7 +63,35 @@ const loadGoogleMapsApi = require('load-google-maps-api');
                 mapResized = false;
                 console.log('b');
             });
-			
+*/
+            
+            map.panBy(200, 0);
+            
+            const moveMap = function() {
+/*
+                let ww = window.innerWidth;
+                
+                
+        
+                if (ww <= 500) {
+                    if (spanned === false) {
+                        setTimeout(function() {
+                            map.panBy(80, 0);
+                        }, 1000);
+                    }
+
+                    spanned = true;
+
+                } else {
+                    
+                    map.panBy(200, 0);
+                    spanned = false;
+                }
+*/
+            }
+            
+			moveMap();
+			window.addEventListener('resize', moveMap);
         
         }).catch(function (error) {
             console.error(error)

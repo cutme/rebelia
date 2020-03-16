@@ -1,6 +1,7 @@
 .o-upload {      
     @extend %rel;
     @extend %flex-inline;
+    @extend %flex-column;
 	overflow: hidden;
 	cursor: pointer;
 	
@@ -20,6 +21,21 @@
 		min-width: 100%;
     }
     
+    &__img {
+        height: 30px;
+        width: 26px;
+        background: {
+            image: url(../img/icons/cv.svg);
+            repeat: no-repeat;
+            size: contain;
+        }
+        margin-right: 10px;
+            
+        @media ( max-width: $smartphone_portrait + px ) {
+            width: 24px;
+        }
+    }
+    
     &__title {
         @extend %flex;
         @extend %flex-y;
@@ -33,18 +49,11 @@
             height: tablet_portrait(80);
         	border-radius: tablet_portrait(12);
         	padding: tablet_portrait(15) tablet_portrait(20);
-//        	border-width: 2px;
         	font-size: tablet_portrait(28);
         }
         
-        img {
-            margin-right: 10px;
-            
-            @media ( max-width: $tablet_portrait + px ) {
-                width: auto;
-                height: 100%;
-            	//width: 43px;
-            }
+        @media ( max-width: $smartphone_portrait + px ) {
+        	padding: 8px 10px 5px 10px;
         }
         
         span {
@@ -53,4 +62,36 @@
             color: $c-blue-01;
         }
     }
+
+    .wpcf7-not-valid {
+        border: none !important;
+        
+        & + .o-upload {
+            &__title {
+                background-color: #FFF5F6 !important;
+                border: 2px solid $c-red-02 !important;
+            }
+        }
+    }
+    
+    .wpcf7-not-valid-tip {
+        display: none;
+        opacity: 0;
+    }
+    
+    &.has-error {
+        .o-upload {
+            &__title {
+                background-color: #FFF5F6 !important;
+                border: 2px solid $c-red-02 !important;
+            }
+            
+            
+        }
+        
+        .wpcf7-not-valid-tip2 {
+            display: block !important
+        }
+    }
 }
+

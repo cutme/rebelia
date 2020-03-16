@@ -9,18 +9,26 @@
         @extend %flex-column;
         @extend %flex-wrap;
         @extend %flex-xy;
+        width: $base--narrow + 100px;
         padding: {
             top: 160px;
             bottom: 190px;
         }
         color: white;
         
+        @media ( max-width: $base--narrow + 100px ) {
+    		width: 100%;
+    	}
+
+
         @media ( max-width: $base--narrow + px ) {
         	padding: {
                 top: 160px;
                 bottom: base-narrow(190);
             }
         }
+        
+        
         
         @media ( max-width: $tablet_portrait + px ) {
             padding: {
@@ -94,18 +102,18 @@
         
         .logo {
             @extend %rel;
-            width: 540px;
+            width: 600px;
             margin: 0 auto -90px auto;
             
             @media ( max-width: $base + px ) {
-                width: base(540);
+                width: base(600);
                 margin-bottom: base(-90);
             }
             
             @media ( max-width: $tablet_portrait + px ) {
-                width: tablet_portrait(410);
+                width: tablet_portrait(460);
                 margin-bottom: tablet_portrait(-60);
-                transform: translateX(tablet_portrait(20));
+                //transform: translateX(tablet_portrait(20));
             }
         }
 
@@ -118,6 +126,10 @@
             
             .junk & {
                 white-space: nowrap;
+            }
+            
+            @media ( max-width: $base + px ) {
+            	font-size: base(88);
             }
             
             @media ( max-width: $base--narrow + 100px ) {
@@ -168,6 +180,7 @@
                 }
             }
         }
+
         .o-wrap {
             padding-bottom: 330px;
             

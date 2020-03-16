@@ -40,7 +40,11 @@
         	//border-width: 2px;
         	font-size: tablet_portrait(26);
         	padding: 0 tablet_portrait(20);
-        }        
+        }
+        
+        .mobile & {
+            font-size: rem(16) !important;
+        }      
     }
     
     textarea {
@@ -141,7 +145,7 @@
                 padding-right: 20px;
                 white-space: nowrap;
                 text-align: left;
-                vertical-align: middle;
+                //vertical-align: middle;
                 
                 @media ( max-width: $tablet_portrait + px ) {
                     padding: 0 0 tablet_portrait(10) 0;
@@ -163,12 +167,23 @@
                 }
             }
             
+            &:first-of-type {
+                th {
+                    @extend %rel;
+                    
+                    @media ( min-width: $tablet_portrait + 1px ) {
+                        top: -10px;
+                    }
+                }
+            }
+            
             &:last-of-type {
                 td {
+                    @extend %rel;
                     padding-top: 0;
 
                     @media ( max-width: $tablet_portrait + px ) {
-                        padding: tablet_portrait(10) 0 0 0;
+                        margin: tablet_portrait(10) 0 0 0;
                     }
                 }
                 
@@ -194,8 +209,11 @@
         margin-top: -20px;
         padding-bottom: tablet_portrait(50);
         
+//        margin-bottom: -60px;
+        padding-bottom: 0;
+        
         h3 {
-            margin-bottom: tablet_portrait(50);
+            margin-bottom: 50px;
         }
         
         .icon-tick {

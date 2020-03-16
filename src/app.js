@@ -13,9 +13,14 @@ require('./js/helpers.js');
 require('./js/ismobile.js');
 require('./js/inview.js');
 require('./js/map.js');
+require('./js/gototarget.js');
+
+require('./js/newsletter.js');
 require('./js/nav.js');
+//require('./js/presslatest.js');
 require('./js/splitting.js');
 require('./js/upload.js');
+require('./js/vimeo.js');
 //require('./js/fixel.js');
 //require('./js/scrollpos.js');
 //require('./js/scrollprogress.js');

@@ -1,7 +1,6 @@
 const Flickity = require('flickity');
-
 const utils = require('fizzy-ui-utils');
-
+import Player from '@vimeo/player';
 
 document.addEventListener('DOMContentLoaded',function() {
     
@@ -13,7 +12,8 @@ document.addEventListener('DOMContentLoaded',function() {
         flkty.on('dragStart', function() {            
             
             for (let i = 0; i < cell.length; i++) {
-                cell[i].getElementsByTagName('a')[0].style.pointerEvents = 'none';
+                //cell[i].getElementsByTagName('a')[0].style.pointerEvents = 'none';
+                cell[i].style.pointerEvents = 'none';
             }
         });
         
@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded',function() {
             setTimeout(function() {
                 
                 for (let i = 0; i < cell.length; i++) {
-                    cell[i].getElementsByTagName('a')[0].style.pointerEvents = 'all';
+                    //cell[i].getElementsByTagName('a')[0].style.pointerEvents = 'all';
+                    cell[i].style.pointerEvents = 'all';
                 } 
 
             }, 100);
@@ -101,40 +102,44 @@ document.addEventListener('DOMContentLoaded',function() {
 
         // Dots
         const cellsButtonGroup = container.nextElementSibling.querySelector('.js-group--dots');
-        const cellsButtons = utils.makeArray( cellsButtonGroup.children );
         
-        // update buttons on select
-        arg.on( 'select', function() {
-            const previousSelectedButton = cellsButtonGroup.querySelector('.is-selected');
-            const selectedButton = cellsButtonGroup.children[ arg.selectedIndex ];
+        if (cellsButtonGroup) {
+        
+            const cellsButtons = utils.makeArray( cellsButtonGroup.children );
             
-            previousSelectedButton.classList.remove('is-selected');
-            selectedButton.classList.add('is-selected');
-        });
-
-        // cell select
-        cellsButtonGroup.addEventListener( 'click', function( event ) {
-            if ( !selectorMatches( event.target, '.dot' ) ) {
-                return;
-            }
-        
-            const index = cellsButtons.indexOf( event.target );
-            arg.select( index );
-        });
-
-
-        // Arrows
-                        
-        const prevArrow = container.nextElementSibling.getElementsByClassName('js-previous')[0];
-        const nextArrow = container.nextElementSibling.getElementsByClassName('js-next')[0];
-        
-        prevArrow.addEventListener( 'click', function() {
-            arg.previous();
-        });
-        
-        nextArrow.addEventListener( 'click', function() {
-            arg.next();
-        });
+            // update buttons on select
+            arg.on( 'select', function() {
+                const previousSelectedButton = cellsButtonGroup.querySelector('.is-selected');
+                const selectedButton = cellsButtonGroup.children[ arg.selectedIndex ];
+                
+                previousSelectedButton.classList.remove('is-selected');
+                selectedButton.classList.add('is-selected');
+            });
+    
+            // cell select
+            cellsButtonGroup.addEventListener( 'click', function( event ) {
+                if ( !selectorMatches( event.target, '.dot' ) ) {
+                    return;
+                }
+            
+                const index = cellsButtons.indexOf( event.target );
+                arg.select( index );
+            });
+    
+    
+            // Arrows
+                            
+            const prevArrow = container.nextElementSibling.getElementsByClassName('js-previous')[0];
+            const nextArrow = container.nextElementSibling.getElementsByClassName('js-next')[0];
+            
+            prevArrow.addEventListener( 'click', function() {
+                arg.previous();
+            });
+            
+            nextArrow.addEventListener( 'click', function() {
+                arg.next();
+            });
+        }
     };
 
     const selectorMatches = function(el, selector) {
@@ -149,7 +154,8 @@ document.addEventListener('DOMContentLoaded',function() {
     window.mechanicsCarousel = function() {
         
         const mechanics = document.getElementById('mechanics'),
-              info = document.getElementById('mechanicsInfo');
+              info = document.getElementById('mechanicsInfo'),
+              slide = mechanics.getElementsByTagName('iframe');
 
         const mechanicsflkty = new Flickity( mechanics, {
             percentPosition: false,
@@ -161,7 +167,7 @@ document.addEventListener('DOMContentLoaded',function() {
                 mobile: {
                     cellAlign: 'left',
                     freeScroll: true,
-                    freeScrollFriction: 0.03,
+                    //freeScrollFriction: 0.03,
                 }
             }
         });
@@ -177,6 +183,25 @@ document.addEventListener('DOMContentLoaded',function() {
             mechanicsInfoflkty.select( index, true, true );
         });
         
+               
+        mechanicsflkty.on('staticClick', function(e, pointer, cellElement, cellIndex) { 
+            
+            
+                       
+            //for (let i = 0; i < slide.length; i++) {
+                
+  
+            //console.log(cellElement)              
+               // el[i].getElementsByTagName('iframe');            
+            
+//            let videoPlayer = new Player(target[0].id);
+            
+
+                
+                //slide[i].style.pointerEvents = 'all';
+           // }            
+        });
+
         disablePointerEvents(mechanics, mechanicsflkty);
         controls(mechanics, mechanicsflkty);
     };
@@ -197,7 +222,7 @@ document.addEventListener('DOMContentLoaded',function() {
                 mobile: {
                     cellAlign: 'left',
                     freeScroll: true,
-                    freeScrollFriction: 0.03,
+                    //freeScrollFriction: 0.03,
                     draggable: true
                 }
             }
@@ -236,7 +261,7 @@ document.addEventListener('DOMContentLoaded',function() {
                 },
                 mobile: {
                     freeScroll: true,
-                    freeScrollFriction: 0.03,
+                    //freeScrollFriction: 0.03,
                 }
             }
         });
@@ -259,7 +284,7 @@ document.addEventListener('DOMContentLoaded',function() {
                 },
                 mobile: {
                     freeScroll: true,
-                    freeScrollFriction: 0.03,
+                    //freeScrollFriction: 0.03,
                 }
             }            
         });

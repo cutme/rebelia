@@ -1,7 +1,7 @@
 .o-back {
-    @extend %abs;
+    @extend %abs; z-index: -1;
     display: none;
-    left: 50px; bottom: -55px;
+    left: 60px; bottom: -65px;
     letter-spacing: -1px;
     font: {
         size: rem(18);
@@ -14,8 +14,11 @@
         bottom: tablet_portrait(-110);
     	font-size: tablet_portrait(28);
     }
+
     
-    .back-visible & {
+    .back-visible &,
+    .single-post &,
+    .single-job & {
         display: block;
     }
     

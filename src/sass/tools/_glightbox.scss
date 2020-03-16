@@ -5,3 +5,16 @@
         }
     }
 }
+
+.gclose {
+    top: 26px !important;
+    
+    
+    &.gbtn {
+        display: block !important;
+    }
+}
+
+.glightbox-container .gslider {
+    z-index: 10 !important;
+}

@@ -57,10 +57,6 @@
     		width: 100%;
     	}
     	
-    	@media ( max-width: $base--narrow + 100px ) {
-    		//max-width: 690px;
-    	}
-    	
     	@media ( max-width: $tablet_portrait + px ) {
     		width: 100%;
     		padding: {

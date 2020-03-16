@@ -1,28 +1,5 @@
 .o-btn {
-    @extend %anim;
-    display: inline-flex;
-    @extend %flex-xy;
-    @extend %rel;
-    height: 55px;
-    background-color: $c-blue-01;
-    border-radius: 6px;
-    white-space: nowrap;
-    padding: 0 30px;
-    letter-spacing: -.5px;
-    font: {
-        family: $text;
-        weight: $semibold;
-        size: rem(22);
-    }
-    color: white;
-    cursor: pointer;
-    
-    @media ( max-width: $tablet_portrait + px ) {
-        height: tablet_portrait(84);
-        padding: 0 tablet_portrait(40);
-        border-radius: tablet_portrait(12);
-        font-size: tablet_portrait(34);
-    }
+    @extend %btn;
 
 	i {
     	margin-right: 15px;
@@ -46,24 +23,6 @@
 	&--violet {
     	background-color: $c-violet-01;
 	}
-}
-
-a.o-btn,
-button.o-btn {    
-    color: white;
-
-    &:not(.o-btn--violet) {
-        &:active {
-            background-color: $c-blue-03 !important;
-        }
-        
-        &:hover {        
-            .desktop & {
-            	background-color: $c-blue-02;
-            }
-        }
-    }
- 
 }
 
 button {

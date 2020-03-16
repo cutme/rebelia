@@ -45,8 +45,8 @@
                         <a href="about.html">About</a>
                     </li>
                     
-                    <li>
-                        <a href="jobs.html" class="jobs js-jobs" data-num="3">Jobs</a>
+                    <li class="js-jobs">
+                        <a href="jobs.html">Jobs</a>
                     </li>
                     
                     <li>
@@ -116,7 +116,7 @@
             </div>
             
             <div class="o-more o-more--arrowdown">
-                    <a href="#" class="icon-arrow-right js-goto"></a>
+                    <a href="#watchtrailersholder" class="icon-arrow-right js-goto" data-offset="50"></a>
                 </div>
         </div>
     </div>
@@ -125,7 +125,7 @@
 <div class="o-container">
     
     
-    <div class="c-watchtrailers anim anim--up">
+    <div class="c-watchtrailers anim anim--up" id="watchtrailersholder">
         <div class="o-section o-section--paddings">
             <div class="o-wrap o-wrap--narrow2">
                 
@@ -192,10 +192,10 @@
                 <article class="o-article o-article--big">
                     
                     <section class="big js-split" data-splitting>
-                        <p>Search everything.</p>
-                        <p>Open it. Take it. Blast it.</p> 
-                        <p>Paint it. Fix it. Assemble it.</p>
-                        <p>Enjoy it.</p>
+                        <p>Search everything. </p>
+                        <p>Open it. Take it. Blast it. </p> 
+                        <p>Paint it. Fix it. Assemble it. </p>
+                        <p>Enjoy it. </p>
                     </section>
                     
                     <section class="normal anim anim--up">
@@ -228,27 +228,36 @@
                 <div class="main-carousel main-carousel--withmobile anim anim--up" id="mechanics">
                     <div class="carousel-cell">
                         <div class="o-trailer o-trailer--mechanics">
-                            <a href="./img/video.mp4" class="o-trailer__video o-trailer__video--mp4 o-trailer__video--shadow o-trailer__video js-video">                                                                
-                                <img srcset="./img/photos/placeholders/mechanics-01.jpg, ./img/photos/placeholders/mechanics-01@2x.jpg 2x" src="./img/photos/placeholders/mechanics-01.jpg" alt="">
-                            </a>
+                            <div class="o-trailer__video o-trailer__video--mp4 o-trailer__video--shadow o-trailer__video js-vimeo">                                                                
+                                
+                                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/394319109?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" id="test1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+
+                            </div>
                         </div>
                     </div>
                     
                     <div class="carousel-cell">
                         <div class="o-trailer o-trailer--mechanics">
-                            <a href="./img/video.mp4" class="o-trailer__video o-trailer__video--mp4 o-trailer__video--shadow o-trailer__video js-video">                                                                
-                                <img srcset="./img/photos/placeholders/mechanics-01.jpg, ./img/photos/placeholders/mechanics-01@2x.jpg 2x" src="./img/photos/placeholders/mechanics-01.jpg" alt="">
-                            </a>
+                            <div class="o-trailer__video o-trailer__video--mp4 o-trailer__video--shadow o-trailer__video js-vimeo">                                                                
+                                
+                                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/394319109?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" id="test2" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+
+                            </div>
                         </div>
                     </div>
                     
                     <div class="carousel-cell">
                         <div class="o-trailer o-trailer--mechanics">
-                            <a href="./img/video.mp4" class="o-trailer__video o-trailer__video--mp4 o-trailer__video--shadow o-trailer__video js-video">                                                                
-                                <img srcset="./img/photos/placeholders/mechanics-01.jpg, ./img/photos/placeholders/mechanics-01@2x.jpg 2x" src="./img/photos/placeholders/mechanics-01.jpg" alt="">
-                            </a>
+                            <div class="o-trailer__video o-trailer__video--mp4 o-trailer__video--shadow o-trailer__video js-vimeo">                                                                
+                                
+                                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/394319109?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" id="test3" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+
+                            </div>
                         </div>
                     </div>
+                    
+                  
+
                 </div>
                 
                 <div class="o-wrap o-wrap--narrow2">
@@ -593,8 +602,7 @@
                                 <th>Languages</th>
                                 
                                 <td>
-                                    <p>
-                                    English, Polish, French, Italian, German, Spanish - Spain, Simplified Chinese, Korean, Portuguese - Brazil, Russian</p>
+                                    <p>English, Polish, French, Italian, German, Spanish - Spain, Simplified Chinese, Korean, Portuguese - Brazil, Russian</p>
                                 </td>
                             </tr>
                         </table>
@@ -614,10 +622,39 @@
                     
                     <p>Stay in the loop with Rebelia news and games updates</p>
                 </article>
+
+
+<div class="emaillist">
+    <form action="#" method="post" class="es_subscription_form es_shortcode_form" id="es_subscription_form_1582495311" data-source="ig-es">
+
+        <div class="es-field-wrap">
+            <label>
+                <input class="es_required_field es_txt_email" type="email" name="email" value="" placeholder="E-mail" required>
+            </label>
+            
+        </div>
+                    
+        <input type="submit" name="submit" class="es_subscription_form_submit es_submit_button es_textbox_button" id="es_subscription_form_submit_1582495311" value="Subscribe">
+<!--
+
+        <span class="es_spinner_image" id="spinner-image"><img src="http://rebelia.cutme.pl/wp-content/plugins/email-subscribers/lite/public/images/spinner.gif"/></span>
+-->
+
+        <div class="error-message">Please enter a valid email address.</div>
+    </form>
+
+    <span class="es_subscription_message" id="es_subscription_message_1582495311"></span>
+</div>
+        
                 
+
+<!--
                 <form action="#" class="c-newsletter__form">
-                    <input type="email" placeholder="Your E-mail"><button type="submit" class="o-btn"><span>Subscribe</span></button>
+                    <input type="email" placeholder="Your E-mail">
+                    <button type="submit" class="o-btn"><span>Subscribe</span></button>
                 </form>
+-->
+
             </div>
         </div>
     </div>
@@ -648,8 +685,8 @@
                             <a href="news.html">News</a>
                         </li>
                         
-                        <li>
-                            <a href="jobs.html" class="jobs js-jobs" data-num="3">Jobs</a>
+                        <li class="js-jobs">
+                            <a href="jobs.html">Jobs</a>
                         </li>
                         
                         <li>
@@ -738,6 +775,11 @@
             </aside>
         </div>
     </footer>
+    
+
+    <script>
+        var jobsCount = 1;
+    </script>
 
     
     <div class="c-cookies move-out" id="cookies">

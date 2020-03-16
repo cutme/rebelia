@@ -23,7 +23,7 @@
         
         .item {
             @media ( max-width: $tablet_portrait + px ) {
-            	font-size: tablet_portrait(25);
+            	font-size: tablet_portrait(25.5);
             }
         }
     }    
@@ -55,6 +55,10 @@
             }
             
             p {
+                &:not(:last-of-type) {
+                    margin-bottom: 2em;
+                }
+
                 @media ( max-width: $tablet_portrait + px ) {
                 	font-size: tablet_portrait(28);
                 }
@@ -88,6 +92,7 @@
     }
     
     .author {
+        letter-spacing: -1px;
         font-size: rem(18);
         opacity: .5;
         

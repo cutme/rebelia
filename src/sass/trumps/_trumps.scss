@@ -70,6 +70,10 @@ html:not(.ie) {
 .alignright {
     float: right;
     margin: 40px 0 40px 60px;
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+    	margin: 20px 0 20px 20px;
+    }
 }
 
 .color-primary {
@@ -95,6 +99,9 @@ html:not(.ie) {
     @media ( max-width: $tablet_portrait + px ) {
     	padding-top: tablet_portrait(110);
     	
+    	.back-visible &,
+        .single-post &,
+        .single-job &,
     	.back-visible & {
         	padding-top: tablet_portrait(190);
     	}
@@ -119,7 +126,7 @@ html:not(.ie) {
         //right: -12px; 
         //top: -12px;
         top: -12px;
-        right: 0;
+        right: -4px;
         transform: translateX(50%);
         width: 21px; height: 21px;
         background-color: $c-pink-01;
@@ -153,3 +160,95 @@ html:not(.ie) {
     display: none !important;
 }
 
+
+// Contact Form 7
+
+.wpcf7-not-valid {
+    background-color: #FFF5F6 !important;
+    border: 2px solid $c-red-02 !important;
+}
+
+
+span.wpcf7-not-valid-tip,
+span.wpcf7-not-valid-tip2 {
+    letter-spacing: -1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font: {
+        size: rem(18);
+        weight: $semibold;
+    }
+    color: $c-red-03;
+    
+    @media ( max-width: $tablet_portrait + px ) {
+    	font-size: tablet_portrait(18) !important;
+    }
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+    	font-size: rem(12) !important;
+    }    
+}
+
+span.wpcf7-not-valid-tip2 {
+    display: none;
+    &.is-visible {
+        display: block !important;
+    }
+}
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, .wpcf7-mail-sent-ok {
+    display: none !important;
+}
+
+
+.wpcf7-form-control-wrap.your-file {
+    @extend %abs;
+    width: 100%;
+}
+
+.ajax-loader {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    z-index: 10 !important;
+    background: {
+        repeat: no-repeat  !important;
+        position: center !important;
+        color: white !important;
+    }
+    border-radius: 6px !important;
+    border: 1px solid #d6d6d6 !important;
+}
+
+
+// Newsletter
+
+.es_subscription_message {
+    left: -1px;
+    text-align: left;
+    width: 520px;
+    margin: 0 auto;
+    font: {
+        size: rem(18) !important;
+        weight: $semibold;
+    }
+    
+    @media ( max-width: $tablet_portrait + px ) {
+    	font-size: tablet_portrait(18) !important;
+    }
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+    	font-size: rem(12) !important;
+    }
+    
+    &.error {
+        color: $c-red-03;
+    }
+    
+    &.success {
+        color: $c-green;
+    }
+}

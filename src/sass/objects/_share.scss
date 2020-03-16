@@ -1,4 +1,49 @@
 .o-share {
+    
+    .addtoany_list {
+        @extend %flex;
+        @extend %flex-x;
+    }
+
+
+    [class^="a2a_button_"] {
+        margin: 0 10px;
+        font-family: $rebelia;
+        font-size: rem(36);
+
+        @media ( max-width: $tablet_portrait + px ) {
+        	font-size: tablet_portrait(64);
+        }
+        
+        &:before {
+            line-height: 1;
+        }          
+    }
+    
+    .a2a_button_facebook {
+        
+        &:before {
+            content: "\e908";
+        }
+    }
+    
+    .a2a_button_twitter {
+        
+        &:before {
+            content: "\e913";
+        }
+    }
+    
+    .a2a_button_linkedin {
+        
+        &:before {
+            content: "\e90a";
+        }
+    }
+    
+    
+    
+    
     ul {
         @extend %flex;
         @extend %flex-x;
@@ -10,7 +55,9 @@
         }
         
         li {
-            
+            @extend %flex;
+            @extend %flex-y;
+
             @media ( min-width: $tablet_portrait + 1px ) {
                 margin: 0 15px;
             }
@@ -56,21 +103,24 @@
             }
             
             span {
-                font: {
-                    size: rem(18);
-                    weight: $medium;
-                }
-                color: $c-blue-07;
-                
-                @media ( max-width: $tablet_portrait + px ) {
-                	display: block;
-                	font-size: tablet_portrait(26);
+                &:not(.heart-this-wrap) {
+                    font: {
+                        size: rem(18);
+                        weight: $medium;
+                    }
+                    color: $c-blue-07;
+                    
+                    @media ( max-width: $tablet_portrait + px ) {
+                    	display: block;
+                    	font-size: tablet_portrait(26);
+                    }
                 }
             }
         }
         
+/*
         [class^="icon-"] {
-            margin-right: 10px;
+           // margin-right: 10px;
             font-size: rem(36);
             
             @media ( max-width: $tablet_portrait + px ) {
@@ -88,5 +138,76 @@
         .icon-twitter-about {
             color: $c-blue-01;
         }
+*/
+    }
+    
+}
+
+
+.heart-this-wrap {
+    margin-right: 10px;
+    
+    .heart-this {
+        @extend %flex;
+        @extend %flex-y;
+        font-family: $rebelia;
+        font-size: rem(36);
+        color: $c-pink-01 !important;   
+
+        @media ( max-width: $tablet_portrait + px ) {
+            margin: 0;
+        	font-size: tablet_portrait(64);
+        }
+        
+        &:before {
+            //background-image: none !important;
+            //background-color: #E36084;
+            //border-radius: 50%;
+            //width: 36px !important;
+            //height: 36px !important;
+            //font-family: $rebelia;
+            //height: 36px;
+            line-height: 1;
+            content: "\e909" !important;
+        }        
+
+        &:hover {
+            color: $c-pink-02 !important;
+        }
+        
+        &:active,
+        &.active {
+            color: $c-pink-03;
+        }
+        
+        span {
+            margin-left: 10px !important;
+            font-family: $text;
+            
+            font: {
+                size: rem(18);
+                weight: $medium;
+            }
+            color: $c-blue-07;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	display: block;
+            	font-size: tablet_portrait(26);
+            }
+        }
     }
 }
+
+.a2a_svg {
+    display: none !important;
+}
+/*
+
+.a2a_count {
+    border: none !important;
+
+    &:before, &:after {
+        display: none;
+    }
+}
+*/

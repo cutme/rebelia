@@ -45,8 +45,8 @@
                         <a href="about.html">About</a>
                     </li>
                     
-                    <li>
-                        <a href="jobs.html" class="jobs js-jobs" data-num="3">Jobs</a>
+                    <li class="js-jobs">
+                        <a href="jobs.html">Jobs</a>
                     </li>
                     
                     <li>
@@ -121,14 +121,31 @@
                     
                     
                         <div class="o-share anim anim--up">
+                        
                             <ul>
+                                <!--
                                 <li>
+
                                     <a href="#">
                                         <i class="icon-heart"></i>
                                         <span>46</span>
-                                    </a>
+                                    </a>                                    
+
+                                </li>
+                             -->   
+                                <li>
+                                    <span class="heart-this-wrap">
+                                        <a href="#" class="heart-this" id="heart-this-5e58e9998c94e" data-post-id="267"><span>0</span></a>
+                                    </span>
+                                    
+                                    <div class="a2a_kit a2a_kit_size_36 addtoany_list" data-a2a-url="http://rebelia.cutme.pl/test/" data-a2a-title="test">
+                                        <a class="a2a_button_facebook" href="#"></a>
+                                        <a class="a2a_button_twitter" href="#"></a>
+                                        <a class="a2a_button_linkedin" href="#"></a>
+                                    </div>
                                 </li>
                                 
+<!--
                                 <li>
                                     <a href="#">
                                         <i class="icon-facebook-new"></i>
@@ -149,6 +166,7 @@
                                         <span>2</span>
                                     </a>
                                 </li>
+-->
                             </ul>
                         </div>
 
@@ -225,10 +243,39 @@
                     
                     <p>Stay in the loop with Rebelia news and games updates</p>
                 </article>
+
+
+<div class="emaillist">
+    <form action="#" method="post" class="es_subscription_form es_shortcode_form" id="es_subscription_form_1582495311" data-source="ig-es">
+
+        <div class="es-field-wrap">
+            <label>
+                <input class="es_required_field es_txt_email" type="email" name="email" value="" placeholder="E-mail" required>
+            </label>
+            
+        </div>
+                    
+        <input type="submit" name="submit" class="es_subscription_form_submit es_submit_button es_textbox_button" id="es_subscription_form_submit_1582495311" value="Subscribe">
+<!--
+
+        <span class="es_spinner_image" id="spinner-image"><img src="http://rebelia.cutme.pl/wp-content/plugins/email-subscribers/lite/public/images/spinner.gif"/></span>
+-->
+
+        <div class="error-message">Please enter a valid email address.</div>
+    </form>
+
+    <span class="es_subscription_message" id="es_subscription_message_1582495311"></span>
+</div>
+        
                 
+
+<!--
                 <form action="#" class="c-newsletter__form">
-                    <input type="email" placeholder="Your E-mail"><button type="submit" class="o-btn"><span>Subscribe</span></button>
+                    <input type="email" placeholder="Your E-mail">
+                    <button type="submit" class="o-btn"><span>Subscribe</span></button>
                 </form>
+-->
+
             </div>
         </div>
     </div>
@@ -259,8 +306,8 @@
                             <a href="news.html">News</a>
                         </li>
                         
-                        <li>
-                            <a href="jobs.html" class="jobs js-jobs" data-num="3">Jobs</a>
+                        <li class="js-jobs">
+                            <a href="jobs.html">Jobs</a>
                         </li>
                         
                         <li>
@@ -349,6 +396,11 @@
             </aside>
         </div>
     </footer>
+    
+
+    <script>
+        var jobsCount = 1;
+    </script>
 
     
     <div class="c-cookies move-out" id="cookies">

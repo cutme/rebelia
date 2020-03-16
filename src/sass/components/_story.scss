@@ -50,21 +50,27 @@
         }
 
         p {
-            letter-spacing: -1px;
+            letter-spacing: -1.5px;
             line-height: 1.25em;
             font: {
                 size: rem(62);
                 weight: $bold;
             }
+            display: block !important;
             
             @media ( max-width: $base--narrow + 100px ) {
             	font-size: base-narrow(62);
             }
             
             @media ( max-width: $tablet_portrait + px ) {
-            	font-size: tablet_portrait(54);
+            	font-size: tablet_portrait(50);
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+            	letter-spacing: -1px;
             }
         }
+
     }
     
     .normal {

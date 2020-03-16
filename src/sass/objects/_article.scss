@@ -28,6 +28,25 @@
         font-weight: $extrabold;
     }
     
+    .wp-block-embed-youtube {
+        @extend %rel;
+        width: 100%;        
+        overflow: hidden;
+        margin-bottom: 40px;
+        padding-bottom: 56.25%;
+        padding-top: 0;
+        height: auto;
+        box-shadow: rgba(black, .25) 0 0 84px;
+        
+        iframe {
+            @extend %abs;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    
     &--margin {
         margin-bottom: 45px;
         
@@ -37,19 +56,13 @@
     }
     
     &--big {
-
         p {
             letter-spacing: -1px;
             line-height: 1.75em;
             font-size: rem(26);
             color: $c-blue-04;
             
-            @media ( max-width: $tablet + px ) {
-            	
-            }
-            
             @media ( max-width: $tablet_portrait + px ) {
-                line-height: 48px;
                 line-height: 1.4em;
             	font-size: tablet_portrait(32);
             }
@@ -93,6 +106,7 @@
             @media ( max-width: $tablet_portrait + px ) {
             	margin-bottom: tablet_portrait(40);
             }
+
         }
         
         p {
@@ -119,7 +133,7 @@
                     content: '•';
                     
                     @media ( max-width: $tablet_portrait + px ) {
-                    	top: 19px;
+                    	top: tablet_portrait(19);
                     }
                 }
             }

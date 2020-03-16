@@ -1,7 +1,7 @@
 .c-topbar {
     @include z-index(topbar);
     @extend %flex;
-    @extend %flex-y;
+    @extend %flex-xy;
     position: fixed;
     left: 0; top: 0;
     width: 100%;
@@ -9,9 +9,11 @@
     background-color: $c-blue-01;
     padding: 8px 30px;
     transform: translate3d(0, -100%, 0);
+    opacity: 0;
     
     &.is-visible {
         transform: translate3d(0, 0, 0);	
+        opacity: 1;
     }
     
     .is-loaded & {
@@ -24,6 +26,7 @@
     }
     
     p {
+        margin-right: 20px;
         letter-spacing: .05px;
         font: {
             size: rem(18);
@@ -37,8 +40,8 @@
     }
     
     .o-btn {
-        @extend %abs;
-        @extend %abs-xy;
+       // @extend %abs;
+        //@extend %abs-xy;
         height: 44px;
         border-radius: 5px;
     }

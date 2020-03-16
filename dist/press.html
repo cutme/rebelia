@@ -45,8 +45,8 @@
                         <a href="about.html">About</a>
                     </li>
                     
-                    <li>
-                        <a href="jobs.html" class="jobs js-jobs" data-num="3">Jobs</a>
+                    <li class="js-jobs">
+                        <a href="jobs.html">Jobs</a>
                     </li>
                     
                     <li>
@@ -144,82 +144,101 @@
                 </div>
 
                 
-                <div class="c-press__latest anim anim--up">
+                <div class="c-press__latest anim anim--up" id="press">
                     
                     <article class="o-article">
                         <h4 class="title">Latest Press Releases</h4>
     
-                        <table>
-                            <tr class="anim anim--up">
+                        <table id="pressList"> 
+                            <tr class="anim anim--up js-item">
                                 <th>12/06/2019</th>
                                 
                                 <td>
-                                    <a href="#">Etiam a arcu hendrerit, laoreet orci facilisis, feugiat enim</a>
+                                    <a href="#">1 Etiam a arcu hendrerit, laoreet orci facilisis, feugiat enim</a>
                                 </td>
                             </tr>
                             
-                            <tr class="anim anim--up">
+                            <tr class="anim anim--up js-item">
                                 <th>12/06/2019</th>
                                 
                                 <td>
-                                    <a href="#">Manen eu purus vulputate, tempor nunc in, facilisis arcu. Maecenas convallis ornare sapien quis finibus</a>
+                                    <a href="#">2 Manen eu purus vulputate, tempor nunc in, facilisis arcu. Maecenas convallis ornare sapien quis finibus</a>
                                 </td>
                             </tr>
                             
-                            <tr class="anim anim--up">
+                            <tr class="anim anim--up js-item">
                                 <th>12/06/2019</th>
                                 
                                 <td>
-                                    <a href="#">Sed mattis tempus massa, at vehicula orci ornare eget.</a>
+                                    <a href="#">3 Sed mattis tempus massa, at vehicula orci ornare eget.</a>
                                 </td>
                             </tr>
                             
-                            <tr class="anim anim--up">
+                            <tr class="anim anim--up js-item">
                                 <th>12/06/2019</th>
                                 
                                 <td>
-                                    <a href="#">Cras auctor nisi porta consectetur convallis. In in placerat neque.</a>
+                                    <a href="#">4 Cras auctor nisi porta consectetur convallis. In in placerat neque.</a>
                                 </td>
                             </tr>
                             
-                            <tr class="anim anim--up">
+                            <tr class="anim anim--up js-item">
                                 <th>12/06/2019</th>
                                 
                                 <td>
-                                    <a href="#">Proin id dapibus massa. Vestibulum sit amet tortor erat dignissim interdum. </a>
+                                    <a href="#">5 Proin id dapibus massa. Vestibulum sit amet tortor erat dignissim interdum. </a>
                                 </td>
                             </tr>
+                          
                             
-                            <tr class="anim anim--up">
-                                <th>13/06/2019</th>
-                                
-                                <td>
-                                    <a href="#">Maecenas fermentum quis nunc ac consectetur</a>
-                                </td>
-                            </tr>
                             
-                            <tr class="anim anim--up">
+                            <tr class="anim anim--up js-item">
                                 <th>12/06/2019</th>
                                 
                                 <td>
-                                    <a href="#">Sed mattis tempus massa, at vehicula orci ornare eget.</a>
+                                    <a href="#">6 Etiam a arcu hendrerit, laoreet orci facilisis, feugiat enim</a>
                                 </td>
                             </tr>
                             
-                            <tr class="anim anim--up">
+                            <tr class="anim anim--up js-item">
                                 <th>12/06/2019</th>
                                 
                                 <td>
-                                    <a href="#">Vivamus a ultrices velit. Interdum et malesuada fames ac ante ipsum</a>
+                                    <a href="#">7 Manen eu purus vulputate, tempor nunc in, facilisis arcu. Maecenas convallis ornare sapien quis finibus</a>
                                 </td>
                             </tr>
+                            
+                            <tr class="anim anim--up js-item">
+                                <th>12/06/2019</th>
+                                
+                                <td>
+                                    <a href="#">8 Sed mattis tempus massa, at vehicula orci ornare eget.</a>
+                                </td>
+                            </tr>
+                            
+                            <tr class="anim anim--up js-item">
+                                <th>12/06/2019</th>
+                                
+                                <td>
+                                    <a href="#">9 Cras auctor nisi porta consectetur convallis. In in placerat neque.</a>
+                                </td>
+                            </tr>
+                            
+                            <tr class="anim anim--up js-item">
+                                <th>12/06/2019</th>
+                                
+                                <td>
+                                    <a href="#">10 Proin id dapibus massa. Vestibulum sit amet tortor erat dignissim interdum. </a>
+                                </td>
+                            </tr>
+                            
                         </table>
                         
                     </article>
                     
-                    <div class="c-press__pagination">
-                        <a href="#" class="previous">Older posts</a>
-                        <a href="#" class="next">Newer posts</a>
+                    <div class="c-press__pagination" id="pressPagination">
+                        <a href="#" class="previous js-prev">Older posts</a>
+                        <a href="#" class="next js-next">Newer posts</a>
                     </div>
                 </div>
                 
@@ -294,10 +313,39 @@
                     
                     <p>Stay in the loop with Rebelia news and games updates</p>
                 </article>
+
+
+<div class="emaillist">
+    <form action="#" method="post" class="es_subscription_form es_shortcode_form" id="es_subscription_form_1582495311" data-source="ig-es">
+
+        <div class="es-field-wrap">
+            <label>
+                <input class="es_required_field es_txt_email" type="email" name="email" value="" placeholder="E-mail" required>
+            </label>
+            
+        </div>
+                    
+        <input type="submit" name="submit" class="es_subscription_form_submit es_submit_button es_textbox_button" id="es_subscription_form_submit_1582495311" value="Subscribe">
+<!--
+
+        <span class="es_spinner_image" id="spinner-image"><img src="http://rebelia.cutme.pl/wp-content/plugins/email-subscribers/lite/public/images/spinner.gif"/></span>
+-->
+
+        <div class="error-message">Please enter a valid email address.</div>
+    </form>
+
+    <span class="es_subscription_message" id="es_subscription_message_1582495311"></span>
+</div>
+        
                 
+
+<!--
                 <form action="#" class="c-newsletter__form">
-                    <input type="email" placeholder="Your E-mail"><button type="submit" class="o-btn"><span>Subscribe</span></button>
+                    <input type="email" placeholder="Your E-mail">
+                    <button type="submit" class="o-btn"><span>Subscribe</span></button>
                 </form>
+-->
+
             </div>
         </div>
     </div>
@@ -329,8 +377,8 @@
                             <a href="news.html">News</a>
                         </li>
                         
-                        <li>
-                            <a href="jobs.html" class="jobs js-jobs" data-num="3">Jobs</a>
+                        <li class="js-jobs">
+                            <a href="jobs.html">Jobs</a>
                         </li>
                         
                         <li>
@@ -419,6 +467,11 @@
             </aside>
         </div>
     </footer>
+    
+
+    <script>
+        var jobsCount = 1;
+    </script>
 
     
     <div class="c-cookies move-out" id="cookies">

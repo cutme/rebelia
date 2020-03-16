@@ -2,8 +2,7 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
 document.addEventListener('DOMContentLoaded',function() {
 
-    const btnGoTo = document.getElementsByClassName('js-goto'),
-          topbar = document.getElementsByClassName('js-top')[0];
+    const btnGoTo = document.getElementsByClassName('js-goto');
 
 	const speed_calculate = function (target) {
     	let base_speed  = 60,
@@ -41,7 +40,6 @@ document.addEventListener('DOMContentLoaded',function() {
 	        let target = window_pos + obj.getBoundingClientRect().top - offset;
 	        cutme.Helpers.scrollTo(target, speed_calculate(target), offset);
 	        
-	        topbar.classList.add('is-out');
 
 	    } else {
     	    

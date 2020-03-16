@@ -27,13 +27,6 @@ document.addEventListener('DOMContentLoaded',function() {
         
         for (let j = 0; j < split.length; j++) {
 
-/*
-            if (cutme.Helpers.isInView(split[j])) {
-                split[j].classList.add('startsplit');
-                
-            }
-*/
-
             const inview = InView(split[j], function(isInView) {
                 if (isInView) {
 
