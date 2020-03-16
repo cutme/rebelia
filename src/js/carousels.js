@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded',function() {
                
         mechanicsflkty.on('staticClick', function(e, pointer, cellElement, cellIndex) { 
             
-            
+            console.log(cellElement);
                        
             //for (let i = 0; i < slide.length; i++) {
                 
